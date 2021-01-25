@@ -23,8 +23,6 @@ public class UIManagerTech : MonoBehaviour
 	public GameObject systemScreen;
 	[Tooltip("The UI Panel holding the CANCEL or ACCEPT Options for New Game")]
 	public GameObject newGameScreen;
-	[Tooltip("The UI Panel holding the YES or NO Options for Load Game")]
-	public GameObject loadGameScreen;
 	[Tooltip("The Loading Screen holding loading bar")]
 	public GameObject loadingScreen;
 
@@ -34,14 +32,6 @@ public class UIManagerTech : MonoBehaviour
 	public Color tint;
 
 	[Header("ADVANDED - Panels")]
-	[Tooltip("The UI Panel holding the New Account Screen elements")]
-	public GameObject newAccountScreen;
-	[Tooltip("The UI Panel holding the Delete Account Screen elements")]
-	public GameObject deleteAccountScreen;
-	[Tooltip("The UI Panel holding Log-In Buttons")]
-	public GameObject loginScreen;
-	[Tooltip("The UI Panel holding account and load menu")]
-	public GameObject databaseScreen;
 	[Tooltip("The UI Menu Bar at the edge of the screen")]
 	public GameObject menuBar;
 
@@ -84,44 +74,10 @@ public class UIManagerTech : MonoBehaviour
 	public string newSceneName;
 	[Tooltip("The loading bar Slider UI element in the Loading Screen")]
 	public Slider loadingBar;
-	private string loadSceneName; // scene name is defined when the load game data is retrieved
 
-	[Header("Register Account")]
-	public TMP_InputField username;
-	public TMP_InputField password;
-	public TMP_InputField confPassword;
-	public TMP_Text error_NewAccount;
-	public TMP_Text messageDisplayDatabase;
-	public string newAccountMessageDisplay = "ACCOUNT CREATED";
-	private string Username;
-	private string Password;
-	private string ConfPassword;
-	private string form;
-	string m_Path;
 	private string[] Characters = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
 								   "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
 								   "1","2","3","4","5","6","7","8","9","0","_","-"};
-
-	[Header("Login Account")]
-	public TMP_InputField logUsername;
-	public TMP_InputField logPassword;
-	private string logUsernameString; // the input in logUsername
-	private string logPasswordString; // the input in logPassword
-	private String[] Lines;
-	private string DecryptedPass;
-	public TMP_Text error_LogIn;
-	public TMP_Text profileDisplay;
-	public string loginMessageDisplay = "LOGGED IN";
-
-	[Header("Delete Account")]
-	public TMP_InputField delUsername;
-	public TMP_InputField delPassword;
-	private string delUsernameString; // the input in delUsername
-	private string delPasswordString; // the input in delPassword
-	private String[] delLines;
-	private string delDecryptedPass;
-	public TMP_Text error_Delete;
-	public string deletedMessageDisplay = "ACCOUNT DELETED";
 
 	[Header("Settings Screen")]
 	public TMP_Text textSpeakers;
@@ -151,30 +107,14 @@ public class UIManagerTech : MonoBehaviour
 	void Start(){
 		// By default, starts on the home screen, disables others
 		homeScreen.SetActive(true);
-		if(newAccountScreen != null)
-		newAccountScreen.SetActive(false);
-		if(deleteAccountScreen != null)
-		deleteAccountScreen.SetActive(false);
-		if(loginScreen != null)
-		loginScreen.SetActive(false);
-		if(databaseScreen != null)
-		databaseScreen.SetActive(false);
 		if(creditsScreen != null)
 		creditsScreen.SetActive(false);
 		if(systemScreen != null)
 		systemScreen.SetActive(false);
 		if(loadingScreen != null)
 		loadingScreen.SetActive(false);
-		if(loadGameScreen != null)
-		loadGameScreen.SetActive(false);
 		if(newGameScreen != null)
 		newGameScreen.SetActive(false);
-
-		if(advancedMenu){
-			// Set Save Path to local
-			m_Path = Application.dataPath;
-			UpdateAccountValues();
-		}
 
 		if(menuBar != null){
 			if(!showMenuBar){
@@ -275,7 +215,7 @@ public class UIManagerTech : MonoBehaviour
 	void Update(){
 		if(reloadSceneButton){
 			if(Input.GetKeyDown(KeyCode.Delete)){
-				SceneManager.LoadScene("Tech Demo Scene");
+				SceneManager.LoadScene("Main");
 			}
 		}
 
@@ -287,18 +227,6 @@ public class UIManagerTech : MonoBehaviour
 			if(showTime){timeDisplay.text = time.Hour + ":" + time.Minute + ":" + time.Second;}else if(!showTime){timeDisplay.text = "";}
 			if(showDate){dateDisplay.text = System.DateTime.Now.ToString("yyyy/MM/dd");}else if(!showDate){dateDisplay.text = "";}
 		}
-	}
-
-	// called when returned back to the database menu, confirmation message displays temporarily
-	public void MessageDisplayDatabase(string message, Color col){
-		StartCoroutine(MessageDisplay(message, col));
-	}
-
-	IEnumerator MessageDisplay(string message, Color col){ // Display and then clear
-		messageDisplayDatabase.color = col;
-		messageDisplayDatabase.text = message;
-		yield return new WaitForSeconds(messageDisplayLength);
-		messageDisplayDatabase.text = "";
 	}
 
 	public void UIScaler(){
@@ -338,12 +266,6 @@ public class UIManagerTech : MonoBehaviour
 		PlayerPrefs.SetFloat("volume",audioSlider.value);
 	}
 
-	// When accepting the QUIT question, the application will close 
-	// (Only works in Executable. Disabled in Editor)
-	public void Quit(){
-		Application.Quit();
-	} 
-
 	// Changes the current quality settings by taking the number passed in from the UI 
 	// element and matching it to the index of the Quality Settings
 	public void QualityChange(int x){
@@ -369,14 +291,6 @@ public class UIManagerTech : MonoBehaviour
 		}
 	}
 
-	// Called when loading saved scene
-	// Add the save code in this function!
-	public void LoadSavedLevel (){
-		if(loadSceneName != ""){
-			StartCoroutine(LoadAsynchronously(newSceneName)); // temporarily uses New Scene Name. Change this to 'loadSceneName' when you program the save data
-		}
-	}
-
 	// Load Bar synching animation
 	IEnumerator LoadAsynchronously (string sceneName){ // scene name is just the name of the current scene being loaded
 		AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
@@ -387,197 +301,6 @@ public class UIManagerTech : MonoBehaviour
 			loadingBar.value = progress;
 
 			yield return null;
-		}
-	}
-
-	public void UpdateAccountValues(){
-		// Register
-		Username = username.text;
-		Password = password.text;
-		ConfPassword = confPassword.text;
-
-		// Log In
-		logUsernameString = logUsername.text;
-		logPasswordString = logPassword.text;	
-
-		// Delete
-		delUsernameString = delUsername.text;
-		delPasswordString = delPassword.text;	
-	}
-
-	public void ConfirmNewAccount(){
-		bool UN = false;
-		bool PW = false;
-		bool CPW = false;
-
-		if (Username != ""){
-			if (!System.IO.File.Exists(m_Path+"_"+Username+".txt")){
-				UN = true;
-			} else {
-				error_NewAccount.color = errorColor;
-				error_NewAccount.text = "USERNAME ALREADY TAKEN";
-			}
-		} else {
-			error_NewAccount.color = errorColor;
-			error_NewAccount.text = "INVALID USERNAME";
-		}
-		if (Password != ""){
-			if(Password.Length > 5){
-				PW = true;
-			} else {
-				error_NewAccount.color = errorColor;
-				error_NewAccount.text = "PASSWORD IS TOO SHORT";
-			}
-		} else {
-			error_NewAccount.color = errorColor;
-			error_NewAccount.text = "INVALID PASSWORD";
-		}
-		if (ConfPassword != ""){
-			if (ConfPassword == Password){
-				CPW = true;
-			} else {
-				error_NewAccount.color = errorColor;
-				error_NewAccount.text = "PASSWORDS MUST MATCH";
-			}
-		} else {
-			error_NewAccount.color = errorColor;
-			error_NewAccount.text = "INVALID PASSWORD";
-		}
-		if (UN == true&&PW == true&&CPW == true){
-			bool Clear = true;
-			int i = 1;
-			foreach(char c in Password){
-				if (Clear){
-					Password = "";
-					Clear = false;
-				}
-				i++;
-				char Encrypted = (char)(c * i);
-				Password += Encrypted.ToString();
-			}
-			form = (Username+Environment.NewLine+Environment.NewLine+Password);
-			System.IO.File.WriteAllText(m_Path+"_"+Username+".txt", form);
-			Username = "";
-			Password = "";
-			username.text = "";
-			password.text = "";
-			confPassword.text = "";
-			error_NewAccount.text = "";
-			DecryptedPass = "";
-
-			MessageDisplayDatabase(newAccountMessageDisplay, successColor);
-			print ("Registration Complete");
-
-			databaseScreen.SetActive(true);
-			newAccountScreen.SetActive(false);
-		}
-	}
-
-	public void LoginButton(){
-		bool UN = false;
-		bool PW = false;
-		if (logUsernameString != ""){
-			if(System.IO.File.Exists(m_Path+"_"+logUsernameString+".txt")){
-				UN = true;
-				Lines = System.IO.File.ReadAllLines(m_Path+"_"+logUsernameString+".txt");
-			} else {
-				error_LogIn.color = errorColor;
-				error_LogIn.text = "INVALID USERNAME";
-			}
-		} else {
-			error_LogIn.color = errorColor;
-				error_LogIn.text = "PLEASE ENTER USERNAME";
-		}
-		if (logPasswordString != ""){
-			if (System.IO.File.Exists(m_Path+"_"+logUsernameString+".txt")){
-				int i = 1;
-				foreach(char c in Lines[2]){
-					i++;
-					char Decrypted = (char)(c / i);
-					DecryptedPass += Decrypted.ToString();
-				}
-				if (logPasswordString == DecryptedPass){
-					PW = true;
-				} else {
-					error_LogIn.color = errorColor;
-					error_LogIn.text = "PASSWORD INCORRECT";
-				}
-			} else {
-				error_LogIn.color = errorColor;
-				error_LogIn.text = "PASSWORD INCORRECT";
-			}
-		} else {
-			error_LogIn.color = errorColor;
-			error_LogIn.text = "PLEASE ENTER PASSWORD";
-		}
-		if (UN == true&&PW == true){
-			profileDisplay.text = logUsernameString;
-			logUsernameString = "";
-			logPasswordString = "";
-			logUsername.text = "";
-			logPassword.text = "";	
-			error_LogIn.text = "";
-			DecryptedPass = "";
-
-			MessageDisplayDatabase(loginMessageDisplay, successColor);
-			print ("Login Successful");
-
-			databaseScreen.SetActive(true);
-			loginScreen.SetActive(false);
-		}
-	}
-
-	public void ConfirmDeleteAccount(){
-		bool UN = false;
-		bool PW = false;
-		if (delUsernameString != "" && profileDisplay.text != delUsernameString){
-			if(System.IO.File.Exists(m_Path+"_"+delUsernameString+".txt")){
-				UN = true;
-				Lines = System.IO.File.ReadAllLines(m_Path+"_"+delUsernameString+".txt");
-			} else {
-				error_Delete.color = errorColor;
-				error_Delete.text = "INVALID USERNAME";
-			}
-		} else {
-			error_Delete.color = errorColor;
-				error_Delete.text = "ENTER VALID USERNAME";
-		}
-		if (delPasswordString != ""){
-			if (System.IO.File.Exists(m_Path+"_"+delUsernameString+".txt")){
-				int i = 1;
-				foreach(char c in Lines[2]){
-					i++;
-					char Decrypted = (char)(c / i);
-					DecryptedPass += Decrypted.ToString();
-				}
-				if (delPasswordString == DecryptedPass){
-					PW = true;
-				} else {
-					error_Delete.color = errorColor;
-					error_Delete.text = "PASSWORD INCORRECT";
-				}
-			} else {
-				error_Delete.color = errorColor;
-				error_Delete.text = "PASSWORD INCORRECT";
-			}
-		} else {
-			error_Delete.color = errorColor;
-			error_Delete.text = "PLEASE ENTER PASSWORD";
-		}
-		if (UN == true&&PW == true){
-			System.IO.File.Delete(m_Path+"_"+delUsernameString+".txt");
-			delUsernameString = "";
-			delPasswordString = "";
-			delUsername.text = "";
-			delPassword.text = "";	
-			error_Delete.text = "";
-			DecryptedPass = "";
-
-			MessageDisplayDatabase(deletedMessageDisplay, successColor);
-			print ("Deletion Successful");
-
-			deleteAccountScreen.SetActive(false);
-			databaseScreen.SetActive(true);
 		}
 	}
 }
