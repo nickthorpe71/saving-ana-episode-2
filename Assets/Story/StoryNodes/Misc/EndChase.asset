@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
+  m_Name: EndChase
+  m_EditorClassIdentifier: 
+  text: 'After a long chase you catch up to Jer Banta and disable his ship. On your
+    way back to Port 401 you debate why you took this mission so seriously since
+    this isn''t even your body. You begin to think of how you might be able to contact
+    Noyaba and how you will find your way back to Ana. '
+  choices: []

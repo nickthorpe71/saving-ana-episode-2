@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
+  m_Name: EndView
+  m_EditorClassIdentifier: 
+  text: After speaking with Jer Banta you decide that there is no point in destroying
+    anohter persons life in exchange for money. You don't even know for sure what
+    Jer had done to have a bounty placed on his head. You remember that you have
+    much more pressing concerns, such as finding your real body and getting back
+    to Ana.
+  choices: []

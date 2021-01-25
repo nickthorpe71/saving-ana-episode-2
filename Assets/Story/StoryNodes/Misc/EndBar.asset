@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
+  m_Name: EndBar
+  m_EditorClassIdentifier: 
+  text: Eternity is a long time, but not long enough to be chasing someone who may
+    or may not dererve the bounty that's been placed on them. You head over to Smokin'
+    Gunz and drink with Anigun for days. After all, there's no need to worry about
+    your health when the body you are currently in isn't even your own.
+  choices: []
