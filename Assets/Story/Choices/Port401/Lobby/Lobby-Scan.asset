@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
+  m_Name: Lobby-Scan
+  m_EditorClassIdentifier: 
+  command: Scan
+  description: the man standing by the lightpost
+  hasDialog: 1
+  dialog: '--Scanner--\nName: Glenn (Uno) Topps\nOccupation: n/a\nHe is wearing a
+    ragged brown cloak which covers his face. All that portrudes from the hood is
+    a lit cigarette and a red glow from what looks to be where one of his eyes might
+    be.--Scanner--\nName: Glenn (Uno) Topps\nOccupation: n/a\nHe is wearing a ragged
+    brown cloak which covers his face. All that portrudes from the hood is a lit
+    cigarette and a red glow from what looks to be where one of his eyes might be.'
+  isWaypoint: 0
+  nextNode: {fileID: 11400000, guid: 69d86d973facb4861a45ccde6718bfa6, type: 2}
