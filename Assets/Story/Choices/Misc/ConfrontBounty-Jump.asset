@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
-  m_Name: MiscStandUp
+  m_Name: ConfrontBounty-Jump
   m_EditorClassIdentifier: 
-  command: Stand up
-  description: <- Type the command on the left and hit enter to take that action
+  command: Jump
+  description: in your ship and chase Jer Banta!
   hasDialog: 0
   dialog: 
   isWaypoint: 0
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: f1e97ca76dc6148c38bd3a0630797409, type: 2}
