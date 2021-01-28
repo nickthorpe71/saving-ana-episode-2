@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
+  m_Name: SpaceBodega-Drink
+  m_EditorClassIdentifier: 
+  command: Drink
+  description: an energy drink
+  hasDialog: 1
+  dialog: \"The good stuff!!\" yells the man behind the counter as you grab a can
+    that says \"Sparks Energy\" from the fridge. You crack the can and guzzle it's 
+    contents. Your body buzzes with vitality!
+  isWaypoint: 0
+  nextNode: {fileID: 11400000, guid: 5bdd30e7e392b4fdebad122b800afdff, type: 2}

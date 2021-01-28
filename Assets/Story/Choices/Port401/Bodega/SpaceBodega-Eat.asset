@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
+  m_Name: SpaceBodega-Eat
+  m_EditorClassIdentifier: 
+  command: Eat
+  description: a candy bar
+  hasDialog: 1
+  dialog: Below the counter where the shop keep is muttering to himself you see a
+    package labeled \"Rocket Bar\". You place it on the counter. The man turns and
+    looks at you saying \"Just take it! You aren't Kid anyway so I couldn't take
+    the money from you even if you do give it to me using her hands!\" As disturbing
+    as this is, you are very hungry. You remove the wrapping and take a bite. The
+    flavor is creamy and sweet but the high sugar content hurts your molars.
+  isWaypoint: 0
+  nextNode: {fileID: 11400000, guid: 5bdd30e7e392b4fdebad122b800afdff, type: 2}
