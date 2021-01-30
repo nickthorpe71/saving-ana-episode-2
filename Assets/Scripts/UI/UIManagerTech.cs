@@ -93,9 +93,6 @@ public class UIManagerTech : MonoBehaviour
 	int speakersIndex = 0;
 	int subtitleLanguageIndex = 0;
 
-	[Header("Debug")]
-	[Tooltip("If this is true, pressing 'R' will reload the scene.")]
-	public bool reloadSceneButton = true;
 	Transform tempParent;
 
 	public void MoveToFront(GameObject currentObj){
@@ -213,12 +210,6 @@ public class UIManagerTech : MonoBehaviour
 
 	// Just for reloading the scene! You can delete this function entirely if you want to
 	void Update(){
-		if(reloadSceneButton){
-			if(Input.GetKeyDown(KeyCode.Delete)){
-				SceneManager.LoadScene("Main");
-			}
-		}
-
 		SetTint();
 
 		if(showMenuBar){

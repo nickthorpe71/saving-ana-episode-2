@@ -8,13 +8,11 @@ public class DialogBoxAnimator : MonoBehaviour
 {
     [HideInInspector] public StoryDisplay storyDisplay;
 
-    public float dialogSpeed = 0.05f;
+    public float dialogSpeed = 0.025f;
     public TMP_Text dialogueTextBox;
 
     private List<SpecialCommand> specialCommands;
 
-    //TextMeshPro uses this to adjust the text object if we change its content while a coroutine is going on.
-    //This means we can change the dialogue live and the shaking text animation will adjust itself to the new content!
     private bool hasTextChanged = false;
 
     //Make the text shakes, if true before animating.
@@ -29,11 +27,11 @@ public class DialogBoxAnimator : MonoBehaviour
         //Simple controls to accelerate the text speed.
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            dialogSpeed = dialogSpeed / 100;
+            dialogSpeed = dialogSpeed / 1000;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            dialogSpeed = 0.05f;
+            dialogSpeed = 0.025f;
         }
     }
     //Call this public function when you want to animate text. This should be used in your other scripts.
@@ -83,11 +81,6 @@ public class DialogBoxAnimator : MonoBehaviour
                 hasTextChanged = false;
             }
 
-            /*  Note: implementing a color command is easy now! All you need to do is
-             *  extract the value, create a bool isColorizing = true, and use this color instead
-             *  of the base c0 color. A second command can put isColorizing to false.
-             *  I leave it up to you to figure this out.
-            */
             if (specialCommands.Count > 0)
             {
                 CheckForCommands(i);
@@ -121,7 +114,7 @@ public class DialogBoxAnimator : MonoBehaviour
             yield return new WaitForSeconds(dialogSpeed);
         }
 
-        // storyDisplay.DisplayChoices();
+        storyDisplay.DisplayChoices();
     }
 
     //Hide our text by making all our characters invisible.

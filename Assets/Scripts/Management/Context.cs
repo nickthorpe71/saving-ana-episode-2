@@ -9,6 +9,7 @@ public class Context : MonoBehaviour
 
     public string[] currentBountyClues;
     public string[] currentScannerData;
+    // to calculate game completion at the end just determine if player has scanned all cannable things and collected all clues
 
     private static Context _instance;
 

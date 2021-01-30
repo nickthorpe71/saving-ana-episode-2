@@ -15,4 +15,8 @@ MonoBehaviour:
   text: 'There are many ships on this platform but one stands out to you. Seeing
     it is like seeing an old friend. There are many ships on this platform but one
     stands out to you. Seeing it is like seeing an old friend. '
-  choices: []
+  image: {fileID: 21300000, guid: e603ccb12f91e46eb87166c913f6720e, type: 3}
+  choices:
+  - {fileID: 11400000, guid: 56a564d453e7748f3b912095fe7a1b34, type: 2}
+  - {fileID: 11400000, guid: 324e5391b92104d968216cbf88c73eb5, type: 2}
+  - {fileID: 11400000, guid: af38eb1f3bfd24ac4b70d1da09b72121, type: 2}

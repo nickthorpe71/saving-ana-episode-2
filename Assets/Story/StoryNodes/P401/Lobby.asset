@@ -16,4 +16,9 @@ MonoBehaviour:
     is someone in a cloak leaning against a lamp post straight ahead of you smoking
     a cigarette. To the left you see what looks like a run down bodega and to the
     right is a large platform with strange aircrafts.
-  choices: []
+  image: {fileID: 21300000, guid: 51043c057f4ab4c6f96764483f7f66eb, type: 3}
+  choices:
+  - {fileID: 11400000, guid: 16e503c5336ba40e090324f8542191e2, type: 2}
+  - {fileID: 11400000, guid: 210ce618fe8d74bc291dcb912abf81c7, type: 2}
+  - {fileID: 11400000, guid: 7e18670562fdc46d2ab4b5c707efea51, type: 2}
+  - {fileID: 11400000, guid: 8736f42ff9afb47828173c43386e4650, type: 2}

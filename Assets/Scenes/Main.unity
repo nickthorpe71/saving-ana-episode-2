@@ -406,18 +406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStarted: 0
   currentNode: {fileID: 11400000, guid: 80d9a15281f584703ae211c72e883a60, type: 2}
-  currentBountyClues:
-  - tests
-  - rests
-  - tests
-  - rests
-  - rests
-  currentScannerData:
-  - rests
-  - rests
-  - rests
-  - rests
-  - rests
+  currentBountyClues: []
+  currentScannerData: []
 --- !u!4 &899366414
 Transform:
   m_ObjectHideFlags: 0

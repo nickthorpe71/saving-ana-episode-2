@@ -16,4 +16,10 @@ MonoBehaviour:
     old dude who is shirtless and singing to himself under his breath.You enter a
     dingy run down space bodega. Behind the counter sits a crusty old dude who is
     shirtless and singing to himself under his breath.
-  choices: []
+  image: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 5e2c130ce801d4dce89986716a03f1a1, type: 2}
+  - {fileID: 11400000, guid: a54e7e290f65d4e2bbbfef870ee041f7, type: 2}
+  - {fileID: 11400000, guid: edb4eaaf68a0d4f7dbbe9689917610ce, type: 2}
+  - {fileID: 11400000, guid: b1364423786cf4065b5a643ed7537172, type: 2}
+  - {fileID: 11400000, guid: 5d70fb1ee825a41219ef69995a1b8a97, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Start-StandUp
   m_EditorClassIdentifier: 
   command: Stand up
-  description: <- Type the command on the left and hit enter to take that action
+  description: and gather your thoughts
   hasDialog: 0
   dialog: 
   isWaypoint: 0
