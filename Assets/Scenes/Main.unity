@@ -375,6 +375,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232811845}
   m_CullTransparentMesh: 0
+--- !u!1 &899366412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899366414}
+  - component: {fileID: 899366413}
+  m_Layer: 0
+  m_Name: Context
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &899366413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899366412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80952d39391ca461ca2041aae2cb0bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStarted: 0
+  currentNode: {fileID: 11400000, guid: 80d9a15281f584703ae211c72e883a60, type: 2}
+  currentBountyClues: []
+  currentScannerData: []
+--- !u!4 &899366414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899366412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 295.89853, y: 66.68354, z: -54.901047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019467813
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v1.0.2
+  m_text: v0.0.1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9b5356971579494b9b27f0122ce83d1, type: 2}
   m_sharedMaterial: {fileID: 21725345230478544, guid: c9b5356971579494b9b27f0122ce83d1,
@@ -1538,7 +1585,7 @@ GameObject:
   - component: {fileID: 82455391426408970}
   - component: {fileID: 114417322173200094}
   m_Layer: 5
-  m_Name: SUI_Tech_Center_Advanced
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8496,7 +8543,7 @@ MonoBehaviour:
   timeDisplay: {fileID: 114300358693706526}
   showDate: 1
   showTime: 1
-  newSceneName: SecondScene
+  newSceneName: Story
   loadingBar: {fileID: 114836065339388168}
   textSpeakers: {fileID: 114823124688582034}
   textSubtitleLanguage: {fileID: 114864125381271426}
@@ -19405,7 +19452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0048828125, y: -34.15039}
+  m_AnchoredPosition: {x: -0.0048828125, y: -34.15027}
   m_SizeDelta: {x: 0, y: 68.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224570674004160218

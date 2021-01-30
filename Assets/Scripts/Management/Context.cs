@@ -1,11 +1,31 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class Context : Singleton<Context>
+public class Context : MonoBehaviour
 {
     public bool gameStarted = false;
-    
-    private StoryNode start;
-    
+
+    public StoryNode currentNode;
+
+    public string[] currentBountyClues;
+    public string[] currentScannerData;
+
+    private static Context _instance;
+
+    public static Context Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
     public Dictionary<string, string> clues = new Dictionary<string, string>()
     {
         {"Topps", "clue about bounty"},
