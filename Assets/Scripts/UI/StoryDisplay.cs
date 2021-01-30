@@ -6,10 +6,6 @@ using TMPro;
 
 public class StoryDisplay : MonoBehaviour
 {
-    // populate choices, dialog, bounty clues, and scanner data
-    // trigger dialog to start animation
-    // once animation is complete (or after a second or do) display choices
-
     public GameObject bountyCluePrefab;
     public GameObject scannerDataPrefab;
     public GameObject choicePrefab;
@@ -20,48 +16,19 @@ public class StoryDisplay : MonoBehaviour
 
     private StoryNode currentNode;
 
-    public float dialogSpeed = 0.05f;
-    public TMP_Text dialogueTextBox;
+    private DialogBoxAnimator dialogAnimator;
 
     void Start()
     {
         currentNode = Context.Instance.currentNode;
-        AnimateDialogueBox(currentNode.text);
+
+        dialogAnimator = GetComponent<DialogBoxAnimator>();
+        dialogAnimator.AnimateDialogueBox(currentNode.text);
+        dialogAnimator.storyDisplay = this;
 
         PopulateList(bountyCluePrefab, Context.Instance.currentBountyClues.Length, bountyList);
         PopulateList(scannerDataPrefab, Context.Instance.currentScannerData.Length, scannerList);
         // PopulateList(scannerDataPrefab, currentNode.choices.length);
-    }
-
-    void Update()
-    {
-        //Simple controls to accelerate the text speed.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            dialogSpeed = dialogSpeed / 100;
-        }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            dialogSpeed = 0.05f;
-        }
-    }
-
-    public void AnimateDialogueBox(string text)
-    {
-        StartCoroutine(AnimateTextCoroutine(text));
-    }
-
-    private IEnumerator AnimateTextCoroutine(string text)
-    {
-        dialogueTextBox.text = "";
-        int i = 0;
-
-        while (i < text.Length)
-        {
-            dialogueTextBox.text += text[i];
-            i++;
-            yield return new WaitForSeconds(dialogSpeed);
-        }
     }
 
     void PopulateList(GameObject prefab, int quantity, Transform transform)
@@ -73,7 +40,6 @@ public class StoryDisplay : MonoBehaviour
             newObj = (GameObject)Instantiate(prefab, transform);
         }
     }
-
 
     public Dictionary<string, string> clues = new Dictionary<string, string>()
     {

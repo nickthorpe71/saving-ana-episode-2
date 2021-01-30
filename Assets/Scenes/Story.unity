@@ -3134,6 +3134,7 @@ GameObject:
   - component: {fileID: 114362604837352584}
   - component: {fileID: 82455391426408970}
   - component: {fileID: 1241892221186123}
+  - component: {fileID: 1241892221186124}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -3161,8 +3162,24 @@ MonoBehaviour:
   bountyList: {fileID: 551930094}
   scannerList: {fileID: 1755169508}
   choiceList: {fileID: 0}
+--- !u!114 &1241892221186124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241892221186122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5069e5da9adc9408994de6ba013577e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyDisplay: {fileID: 0}
   dialogSpeed: 0.05
-  dialogueTextBox: {fileID: 0}
+  dialogueTextBox: {fileID: 114939630930071554}
+  isTextShaking: 0
+  AngleMultiplier: 1
+  CurveScale: 1
 --- !u!1 &1285913583998416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4492,7 +4509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0048828125, y: -34.15039}
+  m_AnchoredPosition: {x: -0.0048828125, y: -34.15027}
   m_SizeDelta: {x: 0, y: 68.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224641707848639636
