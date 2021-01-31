@@ -15,12 +15,9 @@ MonoBehaviour:
   command: Talk
   description: to man standing by the lightpost
   hasDialog: 1
-  dialog: 'Topps: \"Whelp looks like the life of a bounty hunter is just wandering
-    around talking to people, must be nice! This Jer Banata fella you are after is
-    a small fry compared to some fo the fish you''ve fried. Capturing him shouldn''t
-    take you more than 15 to 20 minutes.\""Topps: \"Whelp looks like the life of
-    a bounty hunter is just wandering around talking to people, must be nice! This
-    Jer Banata fella you are after is a small fry compared to some fo the fish you''ve
-    fried. Capturing him shouldn''t take you more than 15 to 20 minutes.\"'
+  dialog: "Topps: \"Whelp looks like the life of a bounty hunter is just wandering
+    around talking to people, must be nice!\x03 This Jer Banata fella you are after
+    is a small fry compared to some fo the fish you've fried. Capturing him shouldn't
+    take you more than 15 to 20 minutes.\"\x03"
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 69d86d973facb4861a45ccde6718bfa6, type: 2}

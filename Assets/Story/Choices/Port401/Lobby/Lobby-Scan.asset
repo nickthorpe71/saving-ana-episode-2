@@ -15,11 +15,16 @@ MonoBehaviour:
   command: Scan
   description: the man standing by the lightpost
   hasDialog: 1
-  dialog: '--Scanner--\nName: Glenn (Uno) Topps\nOccupation: n/a\nHe is wearing a
-    ragged brown cloak which covers his face. All that portrudes from the hood is
-    a lit cigarette and a red glow from what looks to be where one of his eyes might
-    be.--Scanner--\nName: Glenn (Uno) Topps\nOccupation: n/a\nHe is wearing a ragged
-    brown cloak which covers his face. All that portrudes from the hood is a lit
-    cigarette and a red glow from what looks to be where one of his eyes might be.'
+  dialog: '--Scanner--
+
+    Name: Glenn (Uno) Topps
+
+    Occupation: n/a
+
+
+    He
+    is wearing a ragged brown cloak which covers his face. All that portrudes from
+    the hood is a lit cigarette and a red glow from what looks to be where one of
+    his eyes might be.'
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 69d86d973facb4861a45ccde6718bfa6, type: 2}
