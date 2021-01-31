@@ -16,4 +16,6 @@ MonoBehaviour:
     surround you. The hiss of the cabin pressurizing, bleebs of the internal systems,
     and the roar of the engines starting up fill you with determination.
   image: {fileID: 21300000, guid: cf4add2981a554ac9b59e8c0668068b2, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: 8971cff41175d4739b8a915221ddbdf1, type: 2}
+  - {fileID: 11400000, guid: bd5e48b4577384b69b4a8edaae9eb949, type: 2}

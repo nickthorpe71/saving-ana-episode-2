@@ -27,7 +27,7 @@ public class DialogBoxAnimator : MonoBehaviour
         //Simple controls to accelerate the text speed.
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            dialogSpeed = dialogSpeed / 1000;
+            dialogSpeed = 0;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {

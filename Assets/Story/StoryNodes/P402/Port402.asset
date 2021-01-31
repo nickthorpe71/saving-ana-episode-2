@@ -16,4 +16,7 @@ MonoBehaviour:
     This port is well designed and looks very modern and clean. You see two signs,
     "Pot City Diner" and "Restroom"
   image: {fileID: 21300000, guid: e35eaf93b49784c348b8137298ece01c, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: aaed86a834a3d44a699e0acd916c5be9, type: 2}
+  - {fileID: 11400000, guid: bb6f66476b4e34812a2dc31cff5ac00f, type: 2}
+  - {fileID: 11400000, guid: 960dcfc6dbb244af599c019541b03a50, type: 2}

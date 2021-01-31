@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
+  m_Name: Diner-Drink
+  m_EditorClassIdentifier: 
+  command: Drink
+  description: coffee
+  hasDialog: 1
+  dialog: "You sit at a table. A minute later  a waiter comes by and pours you a
+    cup of coffee. They pour it to the brim leaving no room for cream or sugar, luckily
+    you like it black... \n\nYou think of a poem but have nothing to write with.
+    You simple enjoy the moment and let it slip out of mind.\n\nVigorous elixir,
+    whose robust body steams\nBeneath the diner lamps, all worship thee;\nFor yours
+    alone gives life, it seems\nThe inevitable end draws near."
+  isWaypoint: 0
+  nextNode: {fileID: 11400000, guid: 988d23d3e967e4415af39e828e9bdff6, type: 2}

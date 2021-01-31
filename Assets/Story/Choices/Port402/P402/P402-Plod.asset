@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
-  m_Name: SpaceBodega-Drink
+  m_Name: P402-Plod
   m_EditorClassIdentifier: 
-  command: Drink
-  description: an energy drink
-  hasDialog: 1
-  dialog: "\"The good stuff!!\" yells the man behind the counter as you grab a can
-    that says \"Sparks Energy\" from the fridge. You crack the can and guzzle it's 
-    contents. \n\nYour body buzzes with vitality!"
+  command: Plod
+  description: over to Pot City Diner
+  hasDialog: 0
+  dialog: 
   isWaypoint: 0
-  nextNode: {fileID: 11400000, guid: 5bdd30e7e392b4fdebad122b800afdff, type: 2}
+  nextNode: {fileID: 11400000, guid: 988d23d3e967e4415af39e828e9bdff6, type: 2}

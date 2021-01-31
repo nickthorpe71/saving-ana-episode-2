@@ -15,11 +15,12 @@ MonoBehaviour:
   command: Eat
   description: a candy bar
   hasDialog: 1
-  dialog: Below the counter where the shop keep is muttering to himself you see a
-    package labeled \"Rocket Bar\". You place it on the counter. The man turns and
-    looks at you saying \"Just take it! You aren't Kid anyway so I couldn't take
-    the money from you even if you do give it to me using her hands!\" As disturbing
-    as this is, you are very hungry. You remove the wrapping and take a bite. The
-    flavor is creamy and sweet but the high sugar content hurts your molars.
+  dialog: "Below the counter where the shop keep is muttering to himself you see
+    a package labeled \"Rocket Bar\". You place it on the counter. The man turns
+    and looks at you saying \"Just take it! You aren't Kid anyway so I couldn't take
+    the money from you even if you do give it to me using her hands!\" \x03\x03\n\nAs
+    disturbing as this is, you are very hungry. You remove the wrapping and take
+    a bite. The flavor is creamy and sweet but the high sugar content hurts your
+    molars."
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 5bdd30e7e392b4fdebad122b800afdff, type: 2}

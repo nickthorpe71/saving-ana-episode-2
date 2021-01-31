@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
+  m_Name: Bathroom-Scan
+  m_EditorClassIdentifier: 
+  command: Scan
+  description: yourself in the bathroom mirror
+  hasDialog: 1
+  dialog: '--Scanner--
+
+    Name: Kid Vessla
+
+    Occupation: Bounty Hunter
+
+
+    You
+    finally see yourself for the first time. Since you woke up in Port 401 you knew
+    you weren''t in your own body but now you can place a face to the shell you are
+    now occupying. You are an attractive young woman in her mid thirtys, brunette,
+    5''5, and the look for a rebel. '
+  isWaypoint: 0
+  nextNode: {fileID: 11400000, guid: a9fa0cf73aff841acb3b227912341813, type: 2}
