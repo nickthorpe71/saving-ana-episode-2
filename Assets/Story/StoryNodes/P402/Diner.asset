@@ -16,4 +16,10 @@ MonoBehaviour:
     by the sent of delicious food and the gaze of a beautiful woman sitting in a
     booth. '
   image: {fileID: 21300000, guid: 64f7c3994a6414cb488f0f72fc42140f, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: 08a5ccf3818444bf7a483c97a5f8ca42, type: 2}
+  - {fileID: 11400000, guid: 4218202b1ea20422d963ebd4824feaeb, type: 2}
+  - {fileID: 11400000, guid: d123dced2306f45c893cd54ef61cc649, type: 2}
+  - {fileID: 11400000, guid: e44c0ac402e3647d98b399a119775ebd, type: 2}
+  - {fileID: 11400000, guid: 7ab771c25175a45ac86cb47890d6ffdf, type: 2}
+  - {fileID: 11400000, guid: 8088da938dbb44808bcbbc20a21af0bb, type: 2}

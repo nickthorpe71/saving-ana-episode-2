@@ -16,4 +16,6 @@ MonoBehaviour:
     small chunks of space debris flaot past.While your engines head up you gaze out
     of the front of your ship and watch small chunks of space debris flaot past.
   image: {fileID: 21300000, guid: 836828a25b3a748dda57b9670310fe3b, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: b56d5c0fb42704a6f8f8c484ce9a06d0, type: 2}
+  - {fileID: 11400000, guid: 78973c2f77222403484791d2b3b99d69, type: 2}

@@ -17,4 +17,8 @@ MonoBehaviour:
     is that the mirror above the gold plated sink has a large crack running diagonallly
     from the top right to the bottom left.
   image: {fileID: 21300000, guid: 5ebaf5c866ad44b49a795030e322fbd7, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: 5fd45b0300bc14084a43325c1537a10b, type: 2}
+  - {fileID: 11400000, guid: 59b56b8a3ff9e4ab991ce37c68437b3d, type: 2}
+  - {fileID: 11400000, guid: c75d178d031e84302bac12407a0368c3, type: 2}
+  - {fileID: 11400000, guid: 5360cfc8bcd804734a52d39e7617048f, type: 2}

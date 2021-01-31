@@ -12,7 +12,7 @@ public class ChoiceButton : MonoBehaviour
     public void SetText(string newText)
     {
         text.text = newText;
-        StartCoroutine(FadeTextToFullAlpha(2f));
+        StartCoroutine(FadeTextToFullAlpha(1.5f));
     }
     public IEnumerator FadeTextToFullAlpha(float t)
     {
