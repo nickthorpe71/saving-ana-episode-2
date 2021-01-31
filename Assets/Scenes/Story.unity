@@ -4066,7 +4066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyDisplay: {fileID: 0}
-  dialogSpeed: 0.025
+  dialogSpeed: 0.01
   dialogueTextBox: {fileID: 114939630930071554}
   isTextShaking: 0
   AngleMultiplier: 1

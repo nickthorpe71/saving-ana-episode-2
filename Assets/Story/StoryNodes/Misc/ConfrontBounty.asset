@@ -15,4 +15,5 @@ MonoBehaviour:
   text: You confront Jer Banta and he tries to tell you why he has a bounty to stop
     you from taking him in.You confront Jer Banta and he tries to tell you why he
     has a bounty to stop you from taking him in.
+  image: {fileID: 21300000, guid: 9a4d9db54840d47bca48389c7cc9c708, type: 3}
   choices: []

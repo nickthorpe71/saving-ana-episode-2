@@ -16,4 +16,5 @@ MonoBehaviour:
     or may not dererve the bounty that's been placed on them. You head over to Smokin'
     Gunz and drink with Anigun for days. After all, there's no need to worry about
     your health when the body you are currently in isn't even your own.
+  image: {fileID: 21300000, guid: e02e4bfc47ac9494ab663d563a3fd3ba, type: 3}
   choices: []

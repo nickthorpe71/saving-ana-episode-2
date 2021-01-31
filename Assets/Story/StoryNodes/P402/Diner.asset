@@ -15,4 +15,5 @@ MonoBehaviour:
   text: 'As you enter the diner through the decorated metal door, you are welcomed
     by the sent of delicious food and the gaze of a beautiful woman sitting in a
     booth. '
+  image: {fileID: 21300000, guid: 64f7c3994a6414cb488f0f72fc42140f, type: 3}
   choices: []

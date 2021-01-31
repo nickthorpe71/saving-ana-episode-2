@@ -8,7 +8,7 @@ public class DialogBoxAnimator : MonoBehaviour
 {
     [HideInInspector] public StoryDisplay storyDisplay;
 
-    public float dialogSpeed = 0.025f;
+    public float dialogSpeed = 0.01f;
     public TMP_Text dialogueTextBox;
 
     private List<SpecialCommand> specialCommands;
@@ -31,7 +31,7 @@ public class DialogBoxAnimator : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            dialogSpeed = 0.025f;
+            dialogSpeed = 0.01f;
         }
     }
     //Call this public function when you want to animate text. This should be used in your other scripts.
@@ -40,9 +40,6 @@ public class DialogBoxAnimator : MonoBehaviour
         StartCoroutine(AnimateTextCoroutine(text));
     }
 
-    /*Example #5*/
-    //Coroutine for animating the dialogue text.
-    //Instead of using maxVisibleCharacters, we know animate based on the character's alpha value.
     private IEnumerator AnimateTextCoroutine(string text)
     {
 

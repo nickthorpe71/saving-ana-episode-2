@@ -6,12 +6,22 @@ using TMPro;
 public class ChoiceButton : MonoBehaviour
 {
     public TMP_Text text;
-    public Choice choice;
-    public StoryDisplay storyDisplay;
+    [HideInInspector] public Choice choice;
+    [HideInInspector] public StoryDisplay storyDisplay;
 
     public void SetText(string newText)
     {
         text.text = newText;
+        StartCoroutine(FadeTextToFullAlpha(4f));
+    }
+    public IEnumerator FadeTextToFullAlpha(float t)
+    {
+        text.color = new Color(text.color.r, text.color.g, text.color.b, 0);
+        while (text.color.a < 1.0f)
+        {
+            text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a + (Time.deltaTime / t));
+            yield return null;
+        }
     }
 
     public void onClick()

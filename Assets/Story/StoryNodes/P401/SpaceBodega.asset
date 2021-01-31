@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: SpaceBodega
   m_EditorClassIdentifier: 
   text: You enter a dingy run down space bodega. Behind the counter sits a crusty
-    old dude who is shirtless and singing to himself under his breath.You enter a
-    dingy run down space bodega. Behind the counter sits a crusty old dude who is
-    shirtless and singing to himself under his breath.
-  image: {fileID: 0}
+    old dude who is shirtless and singing to himself under his breath.
+  image: {fileID: 21300000, guid: 8331315b3d644498ebe3dabf92e8cd4e, type: 3}
   choices:
   - {fileID: 11400000, guid: 5e2c130ce801d4dce89986716a03f1a1, type: 2}
   - {fileID: 11400000, guid: a54e7e290f65d4e2bbbfef870ee041f7, type: 2}

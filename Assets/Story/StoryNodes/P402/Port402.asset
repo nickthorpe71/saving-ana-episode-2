@@ -15,4 +15,5 @@ MonoBehaviour:
   text: This platform is filled with a warm light and the smell of delicious food.
     This port is well designed and looks very modern and clean. You see two signs,
     "Pot City Diner" and "Restroom"
+  image: {fileID: 21300000, guid: e35eaf93b49784c348b8137298ece01c, type: 3}
   choices: []

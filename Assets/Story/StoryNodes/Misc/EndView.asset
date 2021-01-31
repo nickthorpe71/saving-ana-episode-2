@@ -17,4 +17,5 @@ MonoBehaviour:
     Jer had done to have a bounty placed on his head. You remember that you have
     much more pressing concerns, such as finding your real body and getting back
     to Ana.
+  image: {fileID: 21300000, guid: cdeb09763b84f4d14bc4c29a616cd7a6, type: 3}
   choices: []

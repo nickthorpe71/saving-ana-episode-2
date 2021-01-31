@@ -16,4 +16,5 @@ MonoBehaviour:
     marble counters and shiny tile floor. The only thing that seems out of place
     is that the mirror above the gold plated sink has a large crack running diagonallly
     from the top right to the bottom left.
+  image: {fileID: 21300000, guid: 5ebaf5c866ad44b49a795030e322fbd7, type: 3}
   choices: []

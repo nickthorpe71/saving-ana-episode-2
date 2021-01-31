@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
-  m_Name: InShip403
+  m_Name: InShip402
   m_EditorClassIdentifier: 
-  text: You realize that your cockpit smells mildly of cigarette smoke and alcohol.
-    You grab a pizza shaped air freshener form the console and place hang it from
-    a monitor arm. "Much better!"
+  text: While your engines heat up you gaze out of the front of your ship and watch
+    small chunks of space debris flaot past.While your engines head up you gaze out
+    of the front of your ship and watch small chunks of space debris flaot past.
+  image: {fileID: 21300000, guid: 836828a25b3a748dda57b9670310fe3b, type: 3}
   choices: []
