@@ -14,7 +14,7 @@ public class Asteriod : MonoBehaviour
     void Awake()
     {
         trans = transform;
-        rotationOffset = Random.Range(5f, 30f);
+        rotationOffset = Random.Range(2f, 10f);
         scaleIncrease = Random.Range(3f, 20f);
     }
 

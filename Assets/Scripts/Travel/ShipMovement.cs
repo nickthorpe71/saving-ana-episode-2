@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    private float movementSpeed = 20f;
+    private float movementSpeed = 18f;
     private float turnSpeed = 150f;
 
     private Transform trans;
@@ -24,6 +24,20 @@ public class ShipMovement : MonoBehaviour
         Thrust();
         Turn();
         CheckThrusters();
+        ScreenConstraints();
+        
+    }
+
+    void ScreenConstraints()
+    {
+        if(trans.position.x < -24.5f){
+            trans.position = new Vector3(24.2f, trans.position.y, trans.position.z);
+            thrusters.ResetTrails();
+        }
+        else if(trans.position.x > 24.5f){
+            trans.position = new Vector3(-24.2f, trans.position.y, trans.position.z);
+            thrusters.ResetTrails();
+        }
     }
 
     void CheckThrusters()

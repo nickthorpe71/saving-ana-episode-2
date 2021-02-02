@@ -18,10 +18,6 @@ public class AsteriodManager : MonoBehaviour
         trans = transform;
     }
 
-    // void Update()
-    // {
-    //     // trans.position += -trans.forward * (speed + Input.GetAxis("Vertical")) * Time.deltaTime;
-    // }
     void PlaceAsteroids()
     {
         for (int x = 0; x < numberPerRow; x++)
