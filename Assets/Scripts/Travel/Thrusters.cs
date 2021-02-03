@@ -31,7 +31,7 @@ public class Thrusters : MonoBehaviour
     IEnumerator ResetTralsDelay()
     {
         TrailsOff();
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.35f);
         TrailsOn();
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Asteriod : MonoBehaviour
 {
-    private float scaleOffset = 0.7f;
+    private float scaleOffset = 0.2f;
     private float scaleIncrease = 1;
     private float rotationOffset = 50f;
 
