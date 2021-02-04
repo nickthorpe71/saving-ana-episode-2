@@ -156,9 +156,10 @@ GameObject:
   - component: {fileID: -13007012903795446}
   - component: {fileID: 9069801472744860435}
   - component: {fileID: 3912449260703160181}
+  - component: {fileID: 2417629345718650354}
   m_Layer: 0
   m_Name: Asteriod
-  m_TagString: Untagged
+  m_TagString: Asteriod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,3 +314,16 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 3437baed3ee7d0f408ba282299f808bd, type: 3}
   - {fileID: 2800000, guid: dc01d03b3a990564c91bcf13a9c4ad83, type: 3}
   applyOnDetailMap: 1
+--- !u!114 &2417629345718650354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001255727012750364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa13d6e539e0b44cb9b773ab2167238e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
