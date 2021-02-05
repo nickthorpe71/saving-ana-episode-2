@@ -58,13 +58,13 @@ public class Asteriod : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collider)
-    {
-        if (collider.gameObject.tag == "Asteroid")
-        {
-            Destroy(collider.gameObject);
-        }
-    }
+    // void OnCollisionEnter(Collision collider)
+    // {
+    //     if (collider.gameObject.tag == "Asteroid")
+    //     {
+    //         Destroy(collider.gameObject);
+    //     }
+    // }
 
     void Update()
     {

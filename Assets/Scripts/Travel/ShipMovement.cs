@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    private float movementSpeed = 18f;
+    private float movementSpeed = 13f;
     private float turnSpeed = 150f;
 
     private Transform trans;
@@ -64,7 +64,7 @@ public class ShipMovement : MonoBehaviour
     {
         float roll = turnSpeed * Time.deltaTime * Mathf.Abs(trans.position.x / 5) * Input.GetAxis("Horizontal");
         model.Rotate(0, 0, -roll);
-        trans.position += trans.right * movementSpeed * 1.25f * Time.deltaTime * Input.GetAxis("Horizontal");
+        trans.position += trans.right * movementSpeed * 1.5f * Time.deltaTime * Input.GetAxis("Horizontal");
     }
 
     void Thrust()
