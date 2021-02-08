@@ -15,6 +15,8 @@ public class ShipMovement : MonoBehaviour
 
     public GameObject explosionPrefab;
 
+    public EndPort endPort;
+
     void Awake()
     {
         trans = transform;
@@ -77,6 +79,7 @@ public class ShipMovement : MonoBehaviour
     public void Explode()
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        Destroy(transform);
+        Destroy(gameObject);
+        endPort.LoadNewLevel("Travel");
     }
 }

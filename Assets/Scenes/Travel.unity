@@ -362,7 +362,6 @@ GameObject:
   m_Component:
   - component: {fileID: 90891918}
   - component: {fileID: 90891922}
-  - component: {fileID: 90891921}
   - component: {fileID: 90891920}
   - component: {fileID: 90891919}
   m_Layer: 0
@@ -415,18 +414,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &90891921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90891917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b26f9aec7b24b1196300443229a30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &90891922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7960,6 +7947,17 @@ PrefabInstance:
       propertyPath: trailRight
       value: 
       objectReference: {fileID: 1808393200}
+    - target: {fileID: 6787390174414895847, guid: b2740f8436f9840e2860c60cfac1fa1c,
+        type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+        type: 3}
+    - target: {fileID: 6787390174414895847, guid: b2740f8436f9840e2860c60cfac1fa1c,
+        type: 3}
+      propertyPath: endPort
+      value: 
+      objectReference: {fileID: 90891919}
     - target: {fileID: 6787390175411784072, guid: b2740f8436f9840e2860c60cfac1fa1c,
         type: 3}
       propertyPath: m_Name

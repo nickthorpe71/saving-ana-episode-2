@@ -12,13 +12,13 @@ public class EndPort : MonoBehaviour
 {
     public Slider loadingBar;
 
-    // Called when loading new game scene
-	public void LoadNewLevel () {
-		StartCoroutine(LoadAsynchronously("Story"));
+	public void LoadNewLevel (string newScene) {
+		StartCoroutine(LoadAsynchronously(newScene));
 	}
 
-	// Load Bar synching animation
 	IEnumerator LoadAsynchronously (string sceneName){ 
+        yield return new WaitForSeconds(2);
+        
 		AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
 		while (!operation.isDone){
@@ -36,7 +36,7 @@ public class EndPort : MonoBehaviour
         {
             collider.gameObject.GetComponent<ShipMovement>().movementSpeed = 0;
             collider.gameObject.GetComponent<Thrusters>().Stop();
-            LoadNewLevel();
+            LoadNewLevel("Story");
         }
     }
 }
