@@ -25,9 +25,14 @@ public class StoryDisplay : MonoBehaviour
     public GameObject loadingScreen;
     public Slider loadingBar;
 
+    public StoryNode lobbyNode;
+
     void Start()
     {
-        currentNode = Context.Instance.currentNode;
+        if (Context.Instance.currentNode != null)
+            currentNode = Context.Instance.currentNode;
+        else
+            currentNode = lobbyNode;
 
         backgroundImage.sprite = currentNode.image;
 

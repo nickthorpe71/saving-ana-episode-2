@@ -15,8 +15,11 @@ public class CamFollow : MonoBehaviour
 
     void Update()
     {
-        Vector3 adjsutment = new Vector3(trans.position.x, target.position.y + 6, trans.position.z);
-        Vector3 curPos = Vector3.Lerp(trans.position, adjsutment, distanceDamp * Time.deltaTime);
-        trans.position = curPos;
+        if(target != null)
+        {
+            Vector3 adjsutment = new Vector3(trans.position.x, target.position.y + 6, trans.position.z);
+            Vector3 curPos = Vector3.Lerp(trans.position, adjsutment, distanceDamp * Time.deltaTime);
+            trans.position = curPos;
+        }
     }
 }

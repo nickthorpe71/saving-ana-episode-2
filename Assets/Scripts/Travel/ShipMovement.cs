@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    private float movementSpeed = 13f;
+    [HideInInspector] public float movementSpeed = 13f;
     private float turnSpeed = 150f;
 
     private Transform trans;
