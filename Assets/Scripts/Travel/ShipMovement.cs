@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    [HideInInspector] public float movementSpeed = 13f;
+    [HideInInspector] public float movementSpeed = 15f;
     private float turnSpeed = 150f;
 
     private Transform trans;
@@ -12,6 +12,8 @@ public class ShipMovement : MonoBehaviour
     public Transform model;
 
     private Thrusters thrusters;
+
+    public GameObject explosionPrefab;
 
     void Awake()
     {
@@ -70,5 +72,11 @@ public class ShipMovement : MonoBehaviour
     void Thrust()
     {
         trans.position += trans.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+    }
+
+    public void Explode()
+    {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(transform);
     }
 }

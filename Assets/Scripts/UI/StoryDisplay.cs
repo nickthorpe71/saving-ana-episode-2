@@ -82,16 +82,14 @@ public class StoryDisplay : MonoBehaviour
         }
     }
 
-    public void Reload()
+    public void Reload(string newScene)
     {
-        StartCoroutine(ReloadAsynchronously());
+        StartCoroutine(ReloadAsynchronously(newScene));
     }
 
-
-    // Load Bar synching animation
-    IEnumerator ReloadAsynchronously()
-    { // scene name is just the name of the current scene being loaded
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Story");
+    IEnumerator ReloadAsynchronously(string newScene)
+    { 
+        AsyncOperation operation = SceneManager.LoadSceneAsync(newScene);
 
         while (!operation.isDone)
         {

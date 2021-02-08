@@ -54,17 +54,9 @@ public class Asteriod : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Destroy(collider.gameObject);
+            collider.gameObject.GetComponent<ShipMovement>().Explode();
         }
     }
-
-    // void OnCollisionEnter(Collision collider)
-    // {
-    //     if (collider.gameObject.tag == "Asteroid")
-    //     {
-    //         Destroy(collider.gameObject);
-    //     }
-    // }
 
     void Update()
     {

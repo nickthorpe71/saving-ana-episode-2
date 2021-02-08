@@ -30,10 +30,15 @@ public class ChoiceButton : MonoBehaviour
         {
             storyDisplay.newDialog(choice.dialog);
         }
+        else if (choice.isWaypoint)
+        {
+            Context.Instance.currentNode = choice.nextNode;
+            storyDisplay.Reload("Travel");
+        }
         else
         {
             Context.Instance.currentNode = choice.nextNode;
-            storyDisplay.Reload();
+            storyDisplay.Reload("Story");
         }
     }
 }

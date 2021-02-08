@@ -8,7 +8,7 @@ public class PortBarrier : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Destroy(collider.gameObject);
+            collider.gameObject.GetComponent<ShipMovement>().Explode();
         }
     }
 }
