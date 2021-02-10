@@ -1721,7 +1721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c9d60ead5e7e40141a3fb1ab9b18907c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c9d60ead5e7e40141a3fb1ab9b18907c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1769,6 +1769,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d60ead5e7e40141a3fb1ab9b18907c, type: 3}
+--- !u!1 &458858523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c9d60ead5e7e40141a3fb1ab9b18907c,
+    type: 3}
+  m_PrefabInstance: {fileID: 458858522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &466492148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4571396743685066, guid: 9f1e30a1171d4a64e9380cbb23233d8c,
@@ -5962,6 +5968,16 @@ PrefabInstance:
       propertyPath: scrollDirection
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114554640813501712, guid: 381f8d2fd7542bf438d1ac786ee21fb2,
+        type: 3}
+      propertyPath: jerBanta
+      value: 
+      objectReference: {fileID: 458858523}
+    - target: {fileID: 114554640813501712, guid: 381f8d2fd7542bf438d1ac786ee21fb2,
+        type: 3}
+      propertyPath: endPort
+      value: 
+      objectReference: {fileID: 698618101}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381f8d2fd7542bf438d1ac786ee21fb2, type: 3}
 --- !u!1 &1746988625

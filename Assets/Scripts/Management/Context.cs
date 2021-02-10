@@ -6,13 +6,14 @@ public class Context : MonoBehaviour
     public bool gameStarted = false;
 
     public StoryNode currentNode;
+    public bool isChase;
 
+    // to calculate game completion at the end just determine if player has scanned all cannable things and collected all clues
     public string[] currentBountyClues;
     public string[] currentScannerData;
-    // to calculate game completion at the end just determine if player has scanned all cannable things and collected all clues
+    
 
     private static Context _instance;
-
     public static Context Instance { get { return _instance; } }
 
     private void Awake()

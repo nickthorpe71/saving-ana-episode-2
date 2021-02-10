@@ -12,13 +12,20 @@ public class SpaceManager : MonoBehaviour
 
     public static SpaceManager instance = null;
 
+    public GameObject jerBanta;
+    public GameObject endPort;
+
     void Start()
     {
         direction = scrollDirection;
         instance = this;
 
         if(Context.Instance != null)
-            if(Context.Instance)
+            if(Context.Instance.isChase)
+            {
+                endPort.SetActive(false);
+                jerBanta.SetActive(true);
+            }
     }
 
     void Update()
