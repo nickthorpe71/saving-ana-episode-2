@@ -16,6 +16,9 @@ public class SpaceManager : MonoBehaviour
     {
         direction = scrollDirection;
         instance = this;
+
+        if(Context.Instance != null)
+            if(Context.Instance)
     }
 
     void Update()
