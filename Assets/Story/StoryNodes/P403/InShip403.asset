@@ -16,4 +16,6 @@ MonoBehaviour:
     You grab a pizza shaped air freshener form the console and place hang it from
     a monitor arm. "Much better!"
   image: {fileID: 21300000, guid: 5df7a52f3bb2242d1afa597eea691b0f, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: bd30f49ce0c8f4ebdbc8f7ca9c74e737, type: 2}
+  - {fileID: 11400000, guid: 3f76741efdf234928b196529faf2dbe3, type: 2}
