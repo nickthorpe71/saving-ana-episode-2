@@ -10,11 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
-  m_Name: P403Locked- 2
+  m_Name: P403Locked-Scan
   m_EditorClassIdentifier: 
-  command: 
-  description: 
-  hasDialog: 0
-  dialog: 
+  command: Scan
+  description: the suspicious man
+  hasDialog: 1
+  dialog: '--Scanner--
+
+    Name: Jer Banta
+
+    Occupation: N/A
+
+
+    There aren''t
+    any public records. '
   isWaypoint: 0
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 3d37605ed2d7b41ef88a313dedcf6aa6, type: 2}

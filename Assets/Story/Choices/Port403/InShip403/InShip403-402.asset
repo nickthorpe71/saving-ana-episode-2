@@ -16,5 +16,5 @@ MonoBehaviour:
   description: to Port 402
   hasDialog: 0
   dialog: 
-  isWaypoint: 0
+  isWaypoint: 1
   nextNode: {fileID: 11400000, guid: cc6ec00f9dcca4d2c908b1b3dc400e14, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
-  m_Name: InShip403-401
+  m_Name: P403Unlocked- 1
   m_EditorClassIdentifier: 
-  command: Fly
-  description: to Port 401
+  command: 
+  description: 
   hasDialog: 0
   dialog: 
-  isWaypoint: 1
-  nextNode: {fileID: 11400000, guid: 098efce62ebe94a0b8c379b22dbd3653, type: 2}
+  isWaypoint: 0
+  nextNode: {fileID: 0}
