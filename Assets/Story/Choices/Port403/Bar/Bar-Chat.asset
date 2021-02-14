@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
+  m_Name: Bar-Chat
+  m_EditorClassIdentifier: 
+  command: Chat
+  description: with the bartender
+  hasDialog: 1
+  dialog: '"Hey there Kid, still bounty hunting?" You nod. "I saw a strange looking
+    guy standing around the dock of this port, hopefully that helps. Anyway, I''m
+    only going to be here to give you helpful tips for a few more weeks.  I''m heading
+    out with a crew to explore a world on the outer rim. A lot oof ships have been
+    crashing there so we want to go investigate." You smile and a voice from within
+    you asks "Are you bringing the girls?" The bartender replies "Of course!"'
+  isWaypoint: 0
+  nextNode: {fileID: 11400000, guid: 2e0caf2e26b8342d080b8334532a4d1c, type: 2}
