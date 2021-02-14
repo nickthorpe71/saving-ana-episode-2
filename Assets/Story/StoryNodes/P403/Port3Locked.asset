@@ -15,4 +15,9 @@ MonoBehaviour:
   text: This port is very dark and the smell of alcohol and cigarette smoke fills
     the air. In the corner you notice a suspicious man who seems to be trying to
     avoid being seen. There are two signs, "Smokin' Gunz Bar" and "The Lookout"
-  choices: []
+  image: {fileID: 21300000, guid: 8b0030f25f14a4b11b54717279dc97b7, type: 3}
+  choices:
+  - {fileID: 11400000, guid: e858fcde45c3d4874af5972455db8626, type: 2}
+  - {fileID: 11400000, guid: 5debbbaf53c1f49e8a79af8ba83f8b9c, type: 2}
+  - {fileID: 11400000, guid: e152383a5c54c43e3bd2ba15e61119b0, type: 2}
+  - {fileID: 11400000, guid: c2277db019e0c4f4696a25c97affc22e, type: 2}

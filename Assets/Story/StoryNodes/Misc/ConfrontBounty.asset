@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: ConfrontBounty
   m_EditorClassIdentifier: 
   text: You confront Jer Banta and he tries to tell you why he has a bounty to stop
-    you from taking him in.You confront Jer Banta and he tries to tell you why he
-    has a bounty to stop you from taking him in.
+    you from taking him in.
   image: {fileID: 21300000, guid: 9a4d9db54840d47bca48389c7cc9c708, type: 3}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: e3aac4c7abeb6473f849eda0b38bc494, type: 2}
+  - {fileID: 11400000, guid: d64a8915e41394de4b765ef7018f28ce, type: 2}
+  - {fileID: 11400000, guid: 5f71ce46f3a194eb7bd10d7fbe9d7f1a, type: 2}
+  - {fileID: 11400000, guid: 8ede1054a1eaa4714bedee29c076c31b, type: 2}
+  - {fileID: 11400000, guid: 392db4b74aa514802b01ce42d1843da0, type: 2}

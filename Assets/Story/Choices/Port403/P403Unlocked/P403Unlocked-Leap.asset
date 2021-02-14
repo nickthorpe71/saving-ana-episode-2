@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
-  m_Name: P403Unlocked- 3
+  m_Name: P403Unlocked-Leap
   m_EditorClassIdentifier: 
-  command: 
-  description: 
+  command: Leap
+  description: into your steel falcon
   hasDialog: 0
   dialog: 
   isWaypoint: 0
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 986be834509d84b748f3779bc584530e, type: 2}

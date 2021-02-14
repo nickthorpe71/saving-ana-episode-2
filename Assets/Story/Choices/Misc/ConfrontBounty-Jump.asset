@@ -16,5 +16,5 @@ MonoBehaviour:
   description: in your ship and chase Jer Banta!
   hasDialog: 0
   dialog: 
-  isWaypoint: 0
+  isWaypoint: 1
   nextNode: {fileID: 11400000, guid: f1e97ca76dc6148c38bd3a0630797409, type: 2}

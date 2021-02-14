@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: You see Jer Banata! He is no longer in the corner hiding but is walking toward
     his ship!
-  choices: []
+  image: {fileID: 21300000, guid: 8b0030f25f14a4b11b54717279dc97b7, type: 3}
+  choices:
+  - {fileID: 11400000, guid: 885d75979837742ef9df1084bff1dc5a, type: 2}
+  - {fileID: 11400000, guid: 39e8f60721e2442779a14860c25a1527, type: 2}
+  - {fileID: 11400000, guid: a8e6b8c3bdae34752a86c8ac8f077885, type: 2}
+  - {fileID: 11400000, guid: 5d58dabb660744560a39438e463dd1cb, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
-  m_Name: P403Unlocked- 3
+  m_Name: P403Unlocked-Sprint
   m_EditorClassIdentifier: 
-  command: 
-  description: 
+  command: Sprint
+  description: to Smokin' Gunz bar
   hasDialog: 0
   dialog: 
   isWaypoint: 0
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 2e0caf2e26b8342d080b8334532a4d1c, type: 2}
