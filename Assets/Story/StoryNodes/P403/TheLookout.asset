@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: 'This room is mostly empty with a few lounges and one giant window looking
     out into space. '
-  choices: []
+  image: {fileID: 21300000, guid: cdeb09763b84f4d14bc4c29a616cd7a6, type: 3}
+  choices:
+  - {fileID: 11400000, guid: 63ad2cce9596b452090ed06817e8773e, type: 2}
+  - {fileID: 11400000, guid: 79c6dd22d5e844ad3af9fb92f078341e, type: 2}
+  - {fileID: 11400000, guid: ac7ffb36466f8435d81be5225e1d0c33, type: 2}

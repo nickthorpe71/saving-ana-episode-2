@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa45684830a54d77ade9a46f8fe986f, type: 3}
   m_Name: Bar-Scan
   m_EditorClassIdentifier: 
-  command: 
-  description: 
-  hasDialog: 0
-  dialog: 
+  command: Scan
+  description: the bartender
+  hasDialog: 1
+  dialog: "--Scanner--\nName: Anigun \nOccupation: Bartender / Animal Tamer\n\nAnigun
+    (Ani) is a tough, rougish bartender about thirty years old. He sports a white
+    shirt with a black vest and usually has a bar towel over his shoulder. Simple
+    and sentimental with heroic asperations. "
   isWaypoint: 0
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 2e0caf2e26b8342d080b8334532a4d1c, type: 2}

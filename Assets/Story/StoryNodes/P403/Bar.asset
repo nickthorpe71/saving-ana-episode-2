@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: Bar
   m_EditorClassIdentifier: 
   text: Upon entering the bar you hear the sound of lofi jazz and people chattering.
-    The bartender is working, but still maanger to welcome you with a friendly nod.
-  choices: []
+    The bartender is working, but still manages to welcome you with a friendly nod.
+  image: {fileID: 21300000, guid: e02e4bfc47ac9494ab663d563a3fd3ba, type: 3}
+  choices:
+  - {fileID: 11400000, guid: 6d574db68aa8b4a15b69a6f5b5b9074c, type: 2}
+  - {fileID: 11400000, guid: 03b930cff8c6e429b8c21f74e8c8df2d, type: 2}
+  - {fileID: 11400000, guid: 402e0199d9e284561a8a48eb2d092eb7, type: 2}
+  - {fileID: 11400000, guid: 122e76e35872d46fc953acfdd6e33809, type: 2}
+  - {fileID: 11400000, guid: 4f15e730fadba49d09aae64f75415d87, type: 2}
+  - {fileID: 11400000, guid: 4a2a92298b38a4813bd505cf74b37d45, type: 2}
