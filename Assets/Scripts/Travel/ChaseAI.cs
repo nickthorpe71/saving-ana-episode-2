@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ChaseAI : MonoBehaviour
 {
-    [SerializeField] float forwardSpeed, leftBoundary, rightBoundary;
-    [SerializeField] List<GameObject> asteroids;
+    [SerializeField] float forwardSpeed, sidewaysSpeed, leftBoundary, rightBoundary, cushin;
+    [SerializeField] List<GameObject> asteroids = new List<GameObject>();
+    [SerializeField] List<float> waypoints = new List<float>();
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,8 @@ public class ChaseAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ForwardMovement();
         SidewaysMovement();
+        ForwardMovement();
     }
 
     void ForwardMovement()
@@ -28,16 +29,60 @@ public class ChaseAI : MonoBehaviour
     {
         if (asteroids.Count > 0)
         {
-            List<bool> avoid = new List<bool>();
+            waypoints.Clear();
             foreach (GameObject asteroid in asteroids)
             {
-                if (Mathf.Abs(asteroid.transform.position.x - transform.position.x) < 1.5f)
+                if (Mathf.Abs(asteroid.transform.position.x - transform.position.x) < cushin)
                 {
-                    avoid.Add(true);
+                    // is it to the left or right?
+                    if (asteroid.transform.position.x < transform.position.x)
+                    {
+                        //it is to the left
+                        //set target x coordinate to the right
+                        float x = transform.position.x + cushin;
+                        //verify it is within the boundary
+                        //if not change target x to inside boundary
+                        if (Mathf.Abs(x) > rightBoundary)
+                        {
+                            x = asteroid.transform.position.x - cushin;
+                            waypoints.Add(x);
+
+                            transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed);
+
+                        }
+                        else
+                        {
+                            waypoints.Add(x);
+
+                            transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed);
+
+                        }
+                    }
+                    else
+                    {
+                        //it is to the right (we will assume right if dead center)
+                        //set target to the left
+                        float x = transform.position.x - cushin;
+                        //verify it is within the boundary
+                        //if not change target x to inside boundary
+                        if (Mathf.Abs(x) < leftBoundary)
+                        {
+                            x = asteroid.transform.position.x + cushin;
+                            waypoints.Add(x);
+
+                            transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed);
+                        }
+                        else
+                        {
+                            waypoints.Add(x);
+
+                            transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed);
+                        }
+                    }
                 }
                 else
                 {
-                    avoid.Add(false);
+                    waypoints.Add(transform.position.x);
                 }
             }
         }
@@ -56,8 +101,7 @@ public class ChaseAI : MonoBehaviour
         if (other.gameObject.tag == "Asteriod")
         {
             asteroids.Remove(other.gameObject);
+            waypoints.Remove(waypoints[0]);
         }
     }
-
-
 }
