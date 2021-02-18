@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Asteriod : MonoBehaviour
 {
-    private float scaleOffset = 0.2f;
-    private float scaleIncrease = 1;
-    private float rotationOffset = 50f;
+    [SerializeField] private float scaleOffset = 0.2f;
+    [SerializeField] private float scaleIncrease = 1;
+    [SerializeField] private float rotationOffset = 50f;
+    [SerializeField] float scaleIncreaseMin = 3f, scaleIncreaseMax = 4.4f, 
+        scaleIncreaseBoostMin = 3f, scaleIncreaseBoostMax = 9.8f;
 
     private Transform trans;
     private Vector3 randomRotation;
@@ -34,10 +36,10 @@ public class Asteriod : MonoBehaviour
     {
         int chance = Random.Range(1, 100);
 
-        scaleIncrease = Random.Range(3f, 4.4f);
+        scaleIncrease = Random.Range(scaleIncreaseMin, scaleIncreaseMax);
 
         if (chance > 10 && chance < 86)
-            scaleIncrease += Random.Range(3f, 9.8f);
+            scaleIncrease += Random.Range(scaleIncreaseBoostMin, scaleIncreaseBoostMax);
 
         else if (chance > 85)
             scaleIncrease *= scaleIncrease;

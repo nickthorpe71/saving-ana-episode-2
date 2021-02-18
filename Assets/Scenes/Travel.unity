@@ -10971,6 +10971,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 8001255727012750361, guid: 127cceb2d6d2f4d3ebf6feb0345b6a4a,
     type: 3}
+  gridSpacing: 25
+  numberPerRow: 2
+  numberPerCol: 30
 --- !u!23 &1670667122
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11251,7 +11254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1766392741
 Transform:
   m_ObjectHideFlags: 0

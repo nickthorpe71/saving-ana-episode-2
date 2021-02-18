@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChaseAI : MonoBehaviour
 {
-    [SerializeField] float forwardSpeed, sidewaysSpeed, leftBoundary, rightBoundary, cushin;
+    [SerializeField] float forwardSpeed, sidewaysSpeed, leftBoundary, rightBoundary, cushin, maxRoll = 90f;
     [SerializeField] List<GameObject> asteroids = new List<GameObject>();
     [SerializeField] List<float> waypoints = new List<float>();
     // Start is called before the first frame update
@@ -32,6 +32,7 @@ public class ChaseAI : MonoBehaviour
             waypoints.Clear();
             foreach (GameObject asteroid in asteroids)
             {
+                cushin = (asteroid.transform.localScale.x / 2) + 5;
                 if (Mathf.Abs(asteroid.transform.position.x - transform.position.x) < cushin)
                 {
                     // is it to the left or right?
@@ -85,7 +86,25 @@ public class ChaseAI : MonoBehaviour
                     waypoints.Add(transform.position.x);
                 }
             }
+            Roll();
         }
+        else
+            RollBack();
+    }
+
+    void Roll()
+    {
+        float rollStrength = waypoints[0] - transform.position.x;
+        rollStrength = -rollStrength / cushin;
+        Vector3 roll = new Vector3(0, rollStrength * maxRoll, 0);
+        roll = roll - new Vector3(0, transform.rotation.y, 0);
+        transform.Rotate(roll);
+    }
+
+    void RollBack()
+    {
+        Vector3 roll = new Vector3(0, -transform.rotation.y, 0);
+        transform.Rotate(roll);
     }
 
     private void OnTriggerEnter(Collider other)

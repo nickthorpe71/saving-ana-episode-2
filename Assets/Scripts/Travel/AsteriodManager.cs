@@ -5,9 +5,9 @@ using UnityEngine;
 public class AsteriodManager : MonoBehaviour
 {
     public Asteriod asteroidPrefab;
-    private int gridSpacing = 25;
-    private int numberPerRow = 2;
-    private int numberPerCol = 30;
+    [SerializeField] private int gridSpacing = 25;
+    [SerializeField] private int numberPerRow = 2;
+    [SerializeField] private int numberPerCol = 30;
 
     private Transform trans;
     private float speed = 1.0f;
