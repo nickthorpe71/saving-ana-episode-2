@@ -11,6 +11,8 @@ public class Choice : ScriptableObject
     //TextAreaAttribute(int minLines, int maxLines);
     [TextArea(1,20)]
     public string dialog;
+    public bool hasClue;
+    // public BountyClue clue; // Need to make SO for BountyClue
     public bool isWaypoint;
     public StoryNode nextNode;
 }
