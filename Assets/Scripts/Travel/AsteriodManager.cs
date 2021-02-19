@@ -9,13 +9,17 @@ public class AsteriodManager : MonoBehaviour
     [SerializeField] private int numberPerRow = 2;
     [SerializeField] private int numberPerCol = 30;
 
+    [SerializeField] bool chaseScene;
+
     private Transform trans;
-    private float speed = 1.0f;
+    [SerializeField] private float speed = 2.5f;
+    IEnumerator moverCoroutine;
 
     void Start()
     {
         PlaceAsteroids();
         trans = transform;
+        
     }
 
     void PlaceAsteroids()
@@ -31,11 +35,26 @@ public class AsteriodManager : MonoBehaviour
 
     void InstantiateAsteriod(int x, int y, int z)
     {
-        Instantiate(asteroidPrefab,
+        Asteriod asteriod = Instantiate(asteroidPrefab,
          new Vector3(transform.position.x + (x * gridSpacing * 1.5f) + AsteroidOffset(),
                      transform.position.y + (y * gridSpacing) + AsteroidOffset(),
                      0),
                      Quaternion.identity, transform);
+        if (chaseScene)
+        {
+            moverCoroutine = AddMoverScript(asteriod);
+            StartCoroutine(moverCoroutine);
+        }
+    }
+
+    private IEnumerator AddMoverScript(Asteriod asteriod)
+    {
+        yield return new WaitForSeconds(1f);
+        AsteroidMover asteroidMover = asteriod.gameObject.AddComponent<AsteroidMover>();
+        asteriod.transform.position = new Vector3(asteriod.transform.position.x, asteriod.transform.position.y, 0);
+        asteroidMover.leftBound = -(gridSpacing - 3) * numberPerRow;
+        asteroidMover.rightBound = (gridSpacing - 3) * numberPerRow;
+        asteroidMover.speed = speed;
     }
 
     float AsteroidOffset()

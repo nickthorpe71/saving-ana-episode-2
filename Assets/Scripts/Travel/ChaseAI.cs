@@ -1,23 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ChaseAI : MonoBehaviour
 {
-    [SerializeField] float forwardSpeed, sidewaysSpeed, leftBoundary, rightBoundary, cushin, maxRoll = 90f;
+    [SerializeField] float forwardSpeed, sidewaysSpeed, leftBoundary, rightBoundary, 
+        cushin, maxRoll = 90f, rotationSpeed = 25f, cushinMod;
     [SerializeField] List<GameObject> asteroids = new List<GameObject>();
-    [SerializeField] List<float> waypoints = new List<float>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         SidewaysMovement();
         ForwardMovement();
+
+        ZLock();
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     void ForwardMovement()
@@ -27,84 +29,90 @@ public class ChaseAI : MonoBehaviour
 
     void SidewaysMovement()
     {
+        //if (nearestAsteroid != null)
         if (asteroids.Count > 0)
         {
-            waypoints.Clear();
-            foreach (GameObject asteroid in asteroids)
+            cushin = (asteroids[0].transform.position.x / 2);
+            if (cushin > 0)
             {
-                cushin = (asteroid.transform.localScale.x / 2) + 5;
-                if (Mathf.Abs(asteroid.transform.position.x - transform.position.x) < cushin)
+                cushin += cushinMod;
+            }
+            else if (cushin < 0)
+            {
+                cushin -= cushinMod;
+            }
+            if (Mathf.Abs(asteroids[0].transform.position.x - transform.position.x) < Mathf.Abs(cushin))
+            {
+                // is it to the left or right?
+                if (asteroids[0].transform.position.x < transform.position.x)
                 {
-                    // is it to the left or right?
-                    if (asteroid.transform.position.x < transform.position.x)
+                    //it is to the left
+                    //set target x coordinate to the right
+                    float x = transform.position.x + cushin;
+
+                    //verify it is within the boundary
+                    //if not change target x to inside boundary
+                    if (Mathf.Abs(x) > rightBoundary)
                     {
-                        //it is to the left
-                        //set target x coordinate to the right
-                        float x = transform.position.x + cushin;
-                        //verify it is within the boundary
-                        //if not change target x to inside boundary
-                        if (Mathf.Abs(x) > rightBoundary)
-                        {
-                            x = asteroid.transform.position.x - cushin;
-                            waypoints.Add(x);
-
-                            transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed);
-
-                        }
-                        else
-                        {
-                            waypoints.Add(x);
-
-                            transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed);
-
-                        }
+                        transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed, Space.World);
+                        RollLeft();
                     }
                     else
                     {
-                        //it is to the right (we will assume right if dead center)
-                        //set target to the left
-                        float x = transform.position.x - cushin;
-                        //verify it is within the boundary
-                        //if not change target x to inside boundary
-                        if (Mathf.Abs(x) < leftBoundary)
-                        {
-                            x = asteroid.transform.position.x + cushin;
-                            waypoints.Add(x);
-
-                            transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed);
-                        }
-                        else
-                        {
-                            waypoints.Add(x);
-
-                            transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed);
-                        }
+                        transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed, Space.World);
+                        RollRight();
                     }
                 }
                 else
                 {
-                    waypoints.Add(transform.position.x);
+                    //it is to the right (we will assume right if dead center)
+                    //set target to the left
+                    float x = transform.position.x - cushin;
+                    //verify it is within the boundary
+                    //if not change target x to inside boundary
+                    if (Mathf.Abs(x) < leftBoundary)
+                    {
+                        transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed, Space.World);
+                        RollRight();
+                    }
+                    else
+                    {
+                        transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed, Space.World);
+                        RollLeft();
+                    }
                 }
             }
-            Roll();
+            else
+                RollBack();
         }
-        else
+        else 
+        {
             RollBack();
+        }
+    }
+    void ZLock()
+    {
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+    }
+    void RollRight()
+    {
+        var step = rotationSpeed * Time.deltaTime;
+        Quaternion roll = Quaternion.Euler(0, -maxRoll, 0);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, roll, step);
     }
 
-    void Roll()
+    void RollLeft()
     {
-        float rollStrength = waypoints[0] - transform.position.x;
-        rollStrength = -rollStrength / cushin;
-        Vector3 roll = new Vector3(0, rollStrength * maxRoll, 0);
-        roll = roll - new Vector3(0, transform.rotation.y, 0);
-        transform.Rotate(roll);
+        var step = rotationSpeed * Time.deltaTime;
+        Quaternion roll = Quaternion.Euler(0, maxRoll, 0);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, roll, step);
     }
 
     void RollBack()
     {
-        Vector3 roll = new Vector3(0, -transform.rotation.y, 0);
-        transform.Rotate(roll);
+        var step = rotationSpeed * Time.deltaTime;
+        Quaternion roll = Quaternion.Euler(0, 0, 0);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, roll, step);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -117,10 +125,9 @@ public class ChaseAI : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Asteriod")
+        if (asteroids.Contains(other.gameObject))
         {
             asteroids.Remove(other.gameObject);
-            waypoints.Remove(waypoints[0]);
         }
     }
 }

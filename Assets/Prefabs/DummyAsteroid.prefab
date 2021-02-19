@@ -127,6 +127,6 @@ MonoBehaviour:
   scaleIncrease: 1
   rotationOffset: 50
   scaleIncreaseMin: 1
-  scaleIncreaseMax: 2
+  scaleIncreaseMax: 3
   scaleIncreaseBoostMin: 1
   scaleIncreaseBoostMax: 3
