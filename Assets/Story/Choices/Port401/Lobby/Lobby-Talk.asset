@@ -17,7 +17,8 @@ MonoBehaviour:
   hasDialog: 1
   dialog: "Topps: \"Whelp looks like the life of a bounty hunter is just wandering
     around talking to people, must be nice!\x03 This Jer Banata fella you are after
-    is a small fry compared to some fo the fish you've fried. Capturing him shouldn't
-    take you more than 15 to 20 minutes.\"\x03"
+    is a small fry compared to some of the other fish you've fried. Capturing him
+    shouldn't take you more than 15 to 20 minutes.\"\x03"
+  hasClue: 0
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 69d86d973facb4861a45ccde6718bfa6, type: 2}
