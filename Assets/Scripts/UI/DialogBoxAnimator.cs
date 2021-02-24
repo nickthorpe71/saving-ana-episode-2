@@ -8,7 +8,7 @@ public class DialogBoxAnimator : MonoBehaviour
 {
     [HideInInspector] public StoryDisplay storyDisplay;
 
-    public float dialogSpeed = 0.01f;
+    public float dialogSpeed = 0.005f;
     public TMP_Text dialogueTextBox;
 
     private List<SpecialCommand> specialCommands;

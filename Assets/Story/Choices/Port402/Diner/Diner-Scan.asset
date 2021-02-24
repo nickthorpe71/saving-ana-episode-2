@@ -15,10 +15,11 @@ MonoBehaviour:
   command: Scan
   description: the woman in booth 13
   hasDialog: 1
-  dialog: "--Scanner--\nName: Zella Stingray\nOccupation: CEO of IronNori\n\nHer
-    Amazonian figure its well on her wafer-thin body. She has a decanter shaped waist
-    and her complexion has an impeccable, ochrous hue. Her pencil-thin eyebrows ease
-    down gently to her black, beetle\u2019s-leg eyelashes."
+  dialog: "--Scanner--\nName: Zella Stingray\nOccupation: CEO of IronNori - the largest
+    mining company in the galaxy\n\nHer Amazonian figure its well on her wafer-thin
+    body. She has a decanter shaped waist and her complexion has an impeccable, ochrous
+    hue. Her pencil-thin eyebrows ease down gently to her black, beetle\u2019s-leg
+    eyelashes."
   hasClue: 0
   clue: {fileID: 0}
   hasScanData: 1
