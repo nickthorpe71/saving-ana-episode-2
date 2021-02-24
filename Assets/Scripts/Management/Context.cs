@@ -3,15 +3,13 @@ using UnityEngine;
 
 public class Context : MonoBehaviour
 {
-    public bool gameStarted = false;
-
     public StoryNode currentNode;
     public bool isChase;
 
-    // to calculate game completion at the end just determine if player has scanned all cannable things and collected all clues
-    public string[] currentBountyClues;
-    public string[] currentScannerData;
-    
+    public List<string> currentBountyClues = new List<string>();
+    public List<string> currentScannerData = new List<string>();
+
+    public StoryDisplay storyDisplay;
 
     private static Context _instance;
     public static Context Instance { get { return _instance; } }
@@ -30,5 +28,13 @@ public class Context : MonoBehaviour
         }
     }
 
-    
+    public void AddClue(string clue) {
+        currentBountyClues.Add(clue);
+        storyDisplay.ReloadSideMenus();
+    }
+
+    public void AddScanData(string data) {
+        currentScannerData.Add(data);
+        storyDisplay.ReloadSideMenus();
+    }   
 }

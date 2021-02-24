@@ -34,14 +34,15 @@ public class StoryDisplay : MonoBehaviour
         else
             currentNode = lobbyNode;
 
+        Context.Instance.storyDisplay = this;
+
         backgroundImage.sprite = currentNode.image;
 
         dialogAnimator = GetComponent<DialogBoxAnimator>();
         dialogAnimator.AnimateDialogueBox(currentNode.text);
         dialogAnimator.storyDisplay = this;
 
-        PopulateList(bountyCluePrefab, Context.Instance.currentBountyClues, bountyList);
-        PopulateList(scannerDataPrefab, Context.Instance.currentScannerData, scannerList);
+        ReloadSideMenus();
     }
 
     public void newDialog(string newText)
@@ -49,11 +50,11 @@ public class StoryDisplay : MonoBehaviour
         dialogAnimator.AnimateDialogueBox(newText);
     }
 
-    void PopulateList(GameObject prefab, string[] listArray, Transform transform)
+    void PopulateList(GameObject prefab, List<string> listArray, Transform transform)
     {
         GameObject newObj;
 
-        for (int i = 0; i < listArray.Length; i++)
+        for (int i = 0; i < listArray.Count; i++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
             newObj.GetComponent<TextSetter>().SetText(listArray[i]);
@@ -87,6 +88,12 @@ public class StoryDisplay : MonoBehaviour
         StartCoroutine(ReloadAsynchronously(newScene));
     }
 
+    public void ReloadSideMenus()
+    {
+        PopulateList(bountyCluePrefab, Context.Instance.currentBountyClues, bountyList);
+        PopulateList(scannerDataPrefab, Context.Instance.currentScannerData, scannerList);
+    }
+
     IEnumerator ReloadAsynchronously(string newScene)
     { 
         AsyncOperation operation = SceneManager.LoadSceneAsync(newScene);
@@ -100,27 +107,4 @@ public class StoryDisplay : MonoBehaviour
             yield return null;
         }
     }
-
-    public Dictionary<string, string> clues = new Dictionary<string, string>()
-    {
-        {"Topps", "clue about bounty"},
-        {"Zella", "clue about bounty"},
-        {"Anigun", "clue about bounty"},
-    };
-
-
-    public Dictionary<string, Character> scannerData = new Dictionary<string, Character>()
-    {
-        {"Topps", new Character { name="Glenn (Uno) Topps", description="Wears a ragged brown cloak which covers his face. All that portrudes from the hood is a lit cigarette and a red glow from what looks to be where one of his eyes might be.", occupation="N/A"} },
-        {"Zella", new Character { name="Zella Stingwray", description="", occupation="CEO of IronNori - the largest mining company in the galaxy"} },
-        {"Anigun", new Character { name="Anigun", description="", occupation="Bartender"} },
-    };
 }
-
-
-public class Character
-{
-    public string name { get; set; }
-    public string description { get; set; }
-    public string occupation { get; set; }
-};

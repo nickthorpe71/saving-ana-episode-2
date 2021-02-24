@@ -19,5 +19,9 @@ MonoBehaviour:
     Amazonian figure its well on her wafer-thin body. She has a decanter shaped waist
     and her complexion has an impeccable, ochrous hue. Her pencil-thin eyebrows ease
     down gently to her black, beetle\u2019s-leg eyelashes."
+  hasClue: 0
+  clue: {fileID: 0}
+  hasScanData: 1
+  scanData: {fileID: 11400000, guid: 861e8e772fcb94c7db7880e5cef72782, type: 2}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 988d23d3e967e4415af39e828e9bdff6, type: 2}

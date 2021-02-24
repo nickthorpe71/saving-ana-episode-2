@@ -19,5 +19,9 @@ MonoBehaviour:
     (Ani) is a tough, rougish bartender about thirty years old. He sports a white
     shirt with a black vest and usually has a bar towel over his shoulder. Simple
     and sentimental with heroic asperations. "
+  hasClue: 0
+  clue: {fileID: 0}
+  hasScanData: 1
+  scanData: {fileID: 11400000, guid: 6fc4bb5d89a0d477c944fcc63a2dceab, type: 2}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 2e0caf2e26b8342d080b8334532a4d1c, type: 2}

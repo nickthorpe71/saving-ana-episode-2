@@ -21,6 +21,9 @@ MonoBehaviour:
     someone named Jer Banta. \n\nZella: \"He stopped in here a few hours ago and
     was headed to Port 403.\" \n\nYou thank her and get up to leave saying you would
     love to take her up on breakfast some time. "
-  hasClue: 0
+  hasClue: 1
+  clue: {fileID: 11400000, guid: 30c896ed5634c48e6b86b94040040e9b, type: 2}
+  hasScanData: 0
+  scanData: {fileID: 0}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 988d23d3e967e4415af39e828e9bdff6, type: 2}

@@ -22,6 +22,9 @@ MonoBehaviour:
     A lot oof ships have been crashing there so we want to go investigate.\" \n\nYou
     smile and a voice from within you asks \"Are you bringing the girls?\"\n\nAnigun:
     \"Of course!\""
-  hasClue: 0
+  hasClue: 1
+  clue: {fileID: 11400000, guid: 10a8ab341a3254287aeb4523af207160, type: 2}
+  hasScanData: 0
+  scanData: {fileID: 0}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 2e0caf2e26b8342d080b8334532a4d1c, type: 2}

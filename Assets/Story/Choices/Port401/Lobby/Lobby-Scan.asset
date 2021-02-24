@@ -26,5 +26,9 @@ MonoBehaviour:
     is wearing a ragged brown cloak which covers his face. All that portrudes from
     the hood is a lit cigarette and a red glow from what looks to be where one of
     his eyes might be.'
+  hasClue: 0
+  clue: {fileID: 0}
+  hasScanData: 1
+  scanData: {fileID: 11400000, guid: 6b474998edbc64aa39ea1d4807ac9fd5, type: 2}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 69d86d973facb4861a45ccde6718bfa6, type: 2}
