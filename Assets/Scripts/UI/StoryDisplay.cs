@@ -44,8 +44,6 @@ public class StoryDisplay : MonoBehaviour
         // dialogAnimator.AnimateDialogueBox(currentNode.text);
         // dialogAnimator.storyDisplay = this;
         newDialog(currentNode.text);
-
-        ReloadSideMenus();
     }
 
     public void newDialog(string newText)
@@ -93,9 +91,13 @@ public class StoryDisplay : MonoBehaviour
         StartCoroutine(ReloadAsynchronously(newScene));
     }
 
-    public void ReloadSideMenus()
+    public void ReloadBountyList()
     {
         PopulateList(bountyCluePrefab, Context.Instance.currentBountyClues, bountyList);
+    }
+
+    public void ReloadScannerList()
+    {
         PopulateList(scannerDataPrefab, Context.Instance.currentScannerData, scannerList);
     }
 

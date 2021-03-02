@@ -29,6 +29,12 @@ public class ChoiceButton : MonoBehaviour
         if (choice.hasDialog)
         {
             storyDisplay.newDialog(choice.dialog);
+
+            if (choice.hasClue)
+                Context.Instance.AddClue(choice.clue.text);
+                
+            else if (choice.hasScanData)
+                Context.Instance.AddScanData(choice.scanData.text);
         }
         else if (choice.isWaypoint)
         {
@@ -40,16 +46,5 @@ public class ChoiceButton : MonoBehaviour
             Context.Instance.currentNode = choice.nextNode;
             storyDisplay.Reload("Story");
         }
-
-        if (choice.hasClue)
-        {
-            Context.Instance.AddClue(choice.clue.text);
-        }
-
-        if (choice.hasScanData)
-        {
-            Context.Instance.AddScanData(choice.scanData.text);
-        }
-
     }
 }

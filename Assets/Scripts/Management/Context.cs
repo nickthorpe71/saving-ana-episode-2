@@ -29,14 +29,18 @@ public class Context : MonoBehaviour
     }
 
     public void AddClue(string clue) {
-        // need to make sure we don't already have clue
-        currentBountyClues.Add(clue);
-        storyDisplay.ReloadSideMenus();
+        if (!currentBountyClues.Contains(clue))
+        {
+            currentBountyClues.Add(clue);
+            storyDisplay.ReloadBountyList();
+        }
     }
 
     public void AddScanData(string data) {
-        // need to make sure we don't already have data
-        currentScannerData.Add(data);
-        storyDisplay.ReloadSideMenus();
+        if(!currentScannerData.Contains(data))
+        {
+            currentScannerData.Add(data);
+            storyDisplay.ReloadScannerList();
+        }
     }   
 }
