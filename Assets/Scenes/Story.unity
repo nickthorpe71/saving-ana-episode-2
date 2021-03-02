@@ -925,7 +925,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431027597}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3e311f72d3f344e45b63ec0f3dda1eaf, type: 2}
   m_CullingMode: 0
@@ -2754,7 +2754,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335527813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3e311f72d3f344e45b63ec0f3dda1eaf, type: 2}
   m_CullingMode: 0
@@ -3042,7 +3042,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518852686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3e311f72d3f344e45b63ec0f3dda1eaf, type: 2}
   m_CullingMode: 0
@@ -4005,7 +4005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1241892221186122
 GameObject:
   m_ObjectHideFlags: 0
@@ -4020,7 +4020,6 @@ GameObject:
   - component: {fileID: 114362604837352584}
   - component: {fileID: 82455391426408970}
   - component: {fileID: 1241892221186123}
-  - component: {fileID: 1241892221186124}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -4054,24 +4053,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 1598585935}
   loadingBar: {fileID: 1715039173}
   lobbyNode: {fileID: 11400000, guid: 69d86d973facb4861a45ccde6718bfa6, type: 2}
---- !u!114 &1241892221186124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241892221186122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5069e5da9adc9408994de6ba013577e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storyDisplay: {fileID: 0}
-  dialogSpeed: 0.01
   dialogueTextBox: {fileID: 114939630930071554}
-  isTextShaking: 0
-  AngleMultiplier: 1
-  CurveScale: 1
 --- !u!1 &1285913583998416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,7 +4199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1771812257300204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,12 +5017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9b5356971579494b9b27f0122ce83d1, type: 2}
   m_sharedMaterial: {fileID: 21725345230478544, guid: c9b5356971579494b9b27f0122ce83d1,

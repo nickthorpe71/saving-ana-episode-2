@@ -280,6 +280,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Person: Looked like a man and that was great but this object needs to
+    be able to wrap Looked like a man and that was great but this object needs to
+    be able to wrapLooked like a man and that was great but this object needs to
     be able to wrap'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9b5356971579494b9b27f0122ce83d1, type: 2}

@@ -18,7 +18,7 @@ public class StoryDisplay : MonoBehaviour
 
     private StoryNode currentNode;
 
-    private DialogBoxAnimator dialogAnimator;
+    // private DialogBoxAnimator dialogAnimator;
 
     public Image backgroundImage;
 
@@ -26,6 +26,8 @@ public class StoryDisplay : MonoBehaviour
     public Slider loadingBar;
 
     public StoryNode lobbyNode;
+
+    public TMP_Text dialogueTextBox;
 
     void Start()
     {
@@ -38,16 +40,19 @@ public class StoryDisplay : MonoBehaviour
 
         backgroundImage.sprite = currentNode.image;
 
-        dialogAnimator = GetComponent<DialogBoxAnimator>();
-        dialogAnimator.AnimateDialogueBox(currentNode.text);
-        dialogAnimator.storyDisplay = this;
+        // dialogAnimator = GetComponent<DialogBoxAnimator>();
+        // dialogAnimator.AnimateDialogueBox(currentNode.text);
+        // dialogAnimator.storyDisplay = this;
+        newDialog(currentNode.text);
 
         ReloadSideMenus();
     }
 
     public void newDialog(string newText)
     {
-        dialogAnimator.AnimateDialogueBox(newText);
+        // dialogAnimator.AnimateDialogueBox(newText);
+        dialogueTextBox.text = newText;
+        DisplayChoices();
     }
 
     void PopulateList(GameObject prefab, List<string> listArray, Transform transform)

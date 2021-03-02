@@ -29,11 +29,13 @@ public class Context : MonoBehaviour
     }
 
     public void AddClue(string clue) {
+        // need to make sure we don't already have clue
         currentBountyClues.Add(clue);
         storyDisplay.ReloadSideMenus();
     }
 
     public void AddScanData(string data) {
+        // need to make sure we don't already have data
         currentScannerData.Add(data);
         storyDisplay.ReloadSideMenus();
     }   
