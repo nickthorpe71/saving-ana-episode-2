@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731725, g: 0.13414744, b: 0.12107873, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -357,9 +357,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fd2f4b7421c8a45198d8d21f01a61035, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb32dd1c8e6e64863b8ea847628632a2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -404,10 +404,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80952d39391ca461ca2041aae2cb0bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStarted: 0
   currentNode: {fileID: 11400000, guid: 80d9a15281f584703ae211c72e883a60, type: 2}
+  isChase: 0
   currentBountyClues: []
   currentScannerData: []
+  storyDisplay: {fileID: 0}
 --- !u!4 &899366414
 Transform:
   m_ObjectHideFlags: 0
@@ -19450,7 +19451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.0048828125, y: -34.15027}
+  m_AnchoredPosition: {x: -0.0048828125, y: -34.15039}
   m_SizeDelta: {x: 0, y: 68.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224570674004160218

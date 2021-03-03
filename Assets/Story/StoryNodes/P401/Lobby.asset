@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: Lobby
   m_EditorClassIdentifier: 
-  text: This looks like a boardwalk floating in space mixed with an airport. There
-    is someone in a cloak leaning against a lamp post straight ahead of you smoking
-    a cigarette. To the left you see what looks like a run down bodega and to the
-    right is a large platform with strange aircrafts.
+  text: "This palce looks like a boardwalk floating in space. \n\nThere is someone
+    in a cloak leaning against a lamp post straight ahead of you smoking a cigarette.
+    \n\nTo the left you see what looks like a run down bodega and to the right is
+    a large platform with strange aircrafts."
   image: {fileID: 21300000, guid: 51043c057f4ab4c6f96764483f7f66eb, type: 3}
   choices:
   - {fileID: 11400000, guid: 16e503c5336ba40e090324f8542191e2, type: 2}
