@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AsteriodManager : MonoBehaviour
 {
-    public Asteriod asteroidPrefab;
+    public Asteriod[] asteroidPrefab;
     [SerializeField] private int gridSpacing = 25;
     [SerializeField] private int numberPerRow = 2;
     [SerializeField] private int numberPerCol = 30;
@@ -35,7 +35,7 @@ public class AsteriodManager : MonoBehaviour
 
     void InstantiateAsteriod(int x, int y, int z)
     {
-        Asteriod asteriod = Instantiate(asteroidPrefab,
+        Asteriod asteriod = Instantiate(asteroidPrefab[Random.Range(0, asteroidPrefab.Length)],
          new Vector3(transform.position.x + (x * gridSpacing * 1.5f) + AsteroidOffset(),
                      transform.position.y + (y * gridSpacing) + AsteroidOffset(),
                      0),
