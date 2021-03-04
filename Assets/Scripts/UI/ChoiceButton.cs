@@ -39,7 +39,7 @@ public class ChoiceButton : MonoBehaviour
         else if (choice.isWaypoint)
         {
             Context.Instance.currentNode = choice.nextNode;
-            storyDisplay.Reload("Travel");
+            storyDisplay.Reload("Travel Short");
         }
         else
         {
