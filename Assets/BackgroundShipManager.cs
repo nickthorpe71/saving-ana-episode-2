@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundShipManager : MonoBehaviour
 {
-    [SerializeField] List<GameObject> activeShips, inactiveShips;
+    [SerializeField] Transform backgroundObject;
     [SerializeField] GameObject[] backgroundShips;
     [SerializeField] int maxShipCount, minShipCount, shipCount;
 
@@ -14,12 +14,8 @@ public class BackgroundShipManager : MonoBehaviour
 
         for (int i = 0; i < shipCount; i++)
         {
-            activeShips.Add(GameObject.Instantiate(backgroundShips[Random.Range(0, backgroundShips.Length)]));
+            GameObject ship = GameObject.Instantiate(
+                backgroundShips[Random.Range(0, backgroundShips.Length)], backgroundObject);
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

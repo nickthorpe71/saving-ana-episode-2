@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class ShipMovement : MonoBehaviour
     public GameObject explosionPrefab;
 
     public EndPort endPort;
+
+
 
     void Awake()
     {
@@ -78,8 +81,9 @@ public class ShipMovement : MonoBehaviour
 
     public void Explode()
     {
+        string sceneName = SceneManager.GetActiveScene().name;
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        endPort.LoadNewLevel("Travel");
+        endPort.LoadNewLevel(sceneName);
     }
 }

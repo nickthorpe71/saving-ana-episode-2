@@ -19,6 +19,11 @@ public class BackgroundShipController : MonoBehaviour
     void Update()
     {
         MoveShip();
+        if (transform.position.y > yMax + yReverseOffset)
+            transform.position = new Vector3(transform.position.x, yMin, transform.position.z);
+        else if (transform.position.y < yMin)
+            transform.position = new Vector3(transform.position.x, yMax + yReverseOffset, transform.position.z);
+
     }
 
     private void SetPosition()
