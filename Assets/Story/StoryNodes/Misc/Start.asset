@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: Start
   m_EditorClassIdentifier: 
-  text: "You wake up to see a man standing in front of you.\n\n\"Are you alright
-    Kid? We were talking about your next target and all of a sudden you collapsedm,
-    like a refridgeration unit fell on your head.\" \n\nYour body feels different,
-    you have never seen this place or met the man standing in front of you..."
+  text: 'You wake up to see a man standing in front of you.
+
+
+    <color=yellow>"Are
+    you alright Kid? We were talking about your next target and all of a sudden you
+    collapsed, like an asteroid fell on your head."</color>
+
+
+    Your body feels
+    different, you''ve never seen this place or met the man standing in front of
+    you...'
   image: {fileID: 21300000, guid: 51043c057f4ab4c6f96764483f7f66eb, type: 3}
   choices:
   - {fileID: 11400000, guid: 42967ef2fcbc5465e8b6f5978197dd3e, type: 2}

@@ -6,6 +6,7 @@ public class Context : MonoBehaviour
     public StoryNode currentNode;
     public bool isChase;
 
+    private const int totalBountyClues = 3;
     public List<string> currentBountyClues = new List<string>();
     public List<string> currentScannerData = new List<string>();
 
@@ -32,6 +33,12 @@ public class Context : MonoBehaviour
         if (!currentBountyClues.Contains(clue))
         {
             currentBountyClues.Add(clue);
+
+            if (currentBountyClues.Count == totalBountyClues)
+            {
+                currentBountyClues.Add("Your bounty is at the port of Port403!");
+            }
+
             storyDisplay.ReloadBountyList();
         }
     }

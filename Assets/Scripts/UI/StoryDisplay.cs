@@ -18,7 +18,7 @@ public class StoryDisplay : MonoBehaviour
 
     private StoryNode currentNode;
 
-    // private DialogBoxAnimator dialogAnimator;
+    private DialogBoxAnimator dialogAnimator;
 
     public Image backgroundImage;
 
@@ -40,17 +40,15 @@ public class StoryDisplay : MonoBehaviour
 
         backgroundImage.sprite = currentNode.image;
 
-        // dialogAnimator = GetComponent<DialogBoxAnimator>();
-        // dialogAnimator.AnimateDialogueBox(currentNode.text);
-        // dialogAnimator.storyDisplay = this;
+        dialogAnimator = GetComponent<DialogBoxAnimator>();
+        dialogAnimator.AnimateDialogueBox(currentNode.text);
+        dialogAnimator.storyDisplay = this;
         newDialog(currentNode.text);
     }
 
     public void newDialog(string newText)
     {
-        // dialogAnimator.AnimateDialogueBox(newText);
-        dialogueTextBox.text = newText;
-        DisplayChoices();
+        dialogAnimator.AnimateDialogueBox(newText);
     }
 
     void PopulateList(GameObject prefab, List<string> listArray, Transform transform)
