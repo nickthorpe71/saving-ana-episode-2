@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: Zella
   m_EditorClassIdentifier: 
   giver: Zella
-  text: '
-
-    Zella: "He stopped in here a few hours ago and was headed to Port
-    403." '
+  text: 'Zella: "He stopped in here a few hours ago and was headed to Port 403." '

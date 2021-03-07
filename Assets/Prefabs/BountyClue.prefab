@@ -259,12 +259,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    Person: Looked like a man and that was great but this object needs
-    to be able to wrap Looked like a man and that was great but this object needs
-    to be able to wrapLooked like a man and that was great but this object needs
-    to be able to wrap'
+  m_text: 'Person: Looked like a man and that was great but this object needs to
+    be able to wrap Looked like a man and that was great but this object needs to
+    be able to wrapLooked like a man and that was great but this object needs to
+    be able to wrap'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9b5356971579494b9b27f0122ce83d1, type: 2}
   m_sharedMaterial: {fileID: 21725345230478544, guid: c9b5356971579494b9b27f0122ce83d1,
@@ -328,7 +326,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -1.3429852, z: -1.2929808, w: 1.3410397}
+  m_margin: {x: -57.83911, y: 24.106203, z: -40.623623, w: 1.3410397}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

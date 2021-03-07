@@ -29,8 +29,14 @@ public class StoryDisplay : MonoBehaviour
 
     public TMP_Text dialogueTextBox;
 
+    public ListCounter bountyCounter;
+    public ListCounter scanCounter;
+
     void Start()
     {
+        bountyCounter.UpdateCount(Context.Instance.currentBountyClues.Count);
+        scanCounter.UpdateCount(Context.Instance.currentScannerData.Count);
+
         if (Context.Instance.currentNode != null)
             currentNode = Context.Instance.currentNode;
         else
@@ -60,6 +66,9 @@ public class StoryDisplay : MonoBehaviour
             newObj = (GameObject)Instantiate(prefab, transform);
             newObj.GetComponent<TextSetter>().SetText(listArray[i]);
         }
+
+        bountyCounter.UpdateCount(Context.Instance.currentBountyClues.Count);
+        scanCounter.UpdateCount(Context.Instance.currentScannerData.Count);
     }
 
     public void DisplayChoices()

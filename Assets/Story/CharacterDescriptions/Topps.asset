@@ -13,16 +13,14 @@ MonoBehaviour:
   m_Name: Topps
   m_EditorClassIdentifier: 
   target: Topps
-  text: '
-
-    --Scanner--
+  text: '--Scanner--
 
     Name: Glenn (Uno) Topps
 
     Occupation: n/a
 
 
-    He
-    is wearing a ragged brown cloak which covers his face. All that portrudes from
-    the hood is a lit cigarette and a red glow from what looks to be where one of
-    his eyes might be.'
+    He is
+    wearing a ragged brown cloak which covers his face. All that portrudes from the
+    hood is a lit cigarette and a red glow from what looks to be where one of his
+    eyes might be.'

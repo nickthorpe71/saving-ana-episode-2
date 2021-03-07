@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Anigun
   m_EditorClassIdentifier: 
   target: Anigun
-  text: "\n--Scanner--\nName: Anigun \nOccupation: Bartender / Animal Tamer\n\nAnigun
+  text: "--Scanner--\nName: Anigun \nOccupation: Bartender / Animal Tamer\n\nAnigun
     (Ani) is a tough, rougish bartender about thirty years old. He sports a white
     shirt with a black vest and usually has a bar towel over his shoulder. Simple
     and sentimental with heroic asperations. "
