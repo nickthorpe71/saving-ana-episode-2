@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Topps
   m_EditorClassIdentifier: 
   giver: Topps
-  text: 'Topps: "This Jer Banata fella you are after is a small fry compared to some
-    of the other fish you''ve fried. Capturing him shouldn''t take you more than
-    15 to 20 minutes."'
+  text: '
+
+    Topps: "This Jer Banata fella you are after is a small fry compared
+    to some of the other fish you''ve fried. Capturing him shouldn''t take you more
+    than 15 to 20 minutes."'

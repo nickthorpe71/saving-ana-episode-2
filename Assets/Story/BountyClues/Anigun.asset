@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Anigun
   m_EditorClassIdentifier: 
   giver: Anigun
-  text: 'Anigun: "I saw a strange looking guy standing around the dock of this port
-    (403), hopefully that helps."'
+  text: '
+
+    Anigun: "I saw a strange looking guy standing around the dock of this
+    port (403), hopefully that helps."'

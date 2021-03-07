@@ -39,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 650, y: 500}
+  m_SizeDelta: {x: 750, y: 500}
   m_Pivot: {x: 0.50000006, y: 0.49999994}
 --- !u!222 &5794043150485741289
 CanvasRenderer:
@@ -229,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -9.6184, y: 250}
-  m_SizeDelta: {x: -19.236816, y: 500.00253}
+  m_AnchoredPosition: {x: 0, y: 199.7}
+  m_SizeDelta: {x: 0, y: 600.6531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5794043152224818584
 CanvasRenderer:
@@ -279,8 +279,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285837032
-  m_fontColor: {r: 0.9098039, g: 0.68235296, b: 0.45490196, a: 1}
+    rgba: 4293326330
+  m_fontColor: {r: 0.98039216, g: 0.95893216, b: 0.9019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 93368250
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 26.663643, y: 3.8242834, z: 10.134387, w: 1.3410397}
+  m_margin: {x: -28.53305, y: 166.16776, z: -32.074776, w: -24.634018}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
