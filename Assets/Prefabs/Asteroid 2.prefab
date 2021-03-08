@@ -122,6 +122,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c7d00f74e498ab34684d9b6a89b4fdce, type: 2}
   - {fileID: 2100000, guid: 2a8e348d8b94e2e44b18d78b48204315, type: 2}
   usesMaterials: 1
+  addForce: 1
 --- !u!64 &4477608226235665586
 MeshCollider:
   m_ObjectHideFlags: 0

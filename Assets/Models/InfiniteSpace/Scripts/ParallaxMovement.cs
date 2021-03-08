@@ -8,6 +8,7 @@ public class ParallaxMovement : MonoBehaviour {
     //This speed value create the parallax effect
     public float minSpeed = 0.2f;
     public float maxSpeed = 0.6f;
+    [SerializeField] float upDownMod;
     Vector3 speed;
     float lastScrollValue;
 
@@ -71,7 +72,7 @@ public class ParallaxMovement : MonoBehaviour {
                 transform.position = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0f, 1f), -limitOffScreen, 10f + initialValueZ));
                 break;
             case ScrollDirection.UpToDown:
-                transform.position = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0f, 1f), 1f + limitOffScreen, 10f + initialValueZ));
+                transform.position = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0f, 1f), 1f + limitOffScreen + upDownMod, 10f + initialValueZ));
                 break;
         }
         //Check for random components to randomize the object

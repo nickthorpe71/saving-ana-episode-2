@@ -18,6 +18,8 @@ public class ShipMovement : MonoBehaviour
 
     public EndPort endPort;
 
+    [SerializeField] bool edgeLock;
+    [SerializeField] float edge = 24.2f;
 
 
     void Awake()
@@ -37,13 +39,31 @@ public class ShipMovement : MonoBehaviour
 
     void ScreenConstraints()
     {
-        if(trans.position.x < -24.5f){
-            trans.position = new Vector3(24.2f, trans.position.y, trans.position.z);
-            thrusters.ResetTrails();
+        if (!edgeLock)
+        {
+            if (trans.position.x < -edge)
+            {
+                trans.position = new Vector3(edge, trans.position.y, trans.position.z);
+                thrusters.ResetTrails();
+            }
+            else if (trans.position.x > edge)
+            {
+                trans.position = new Vector3(-edge, trans.position.y, trans.position.z);
+                thrusters.ResetTrails();
+            }
         }
-        else if(trans.position.x > 24.5f){
-            trans.position = new Vector3(-24.2f, trans.position.y, trans.position.z);
-            thrusters.ResetTrails();
+        else
+        {
+            if (trans.position.x < -edge)
+            {
+                trans.position = new Vector3(-edge, trans.position.y, trans.position.z);
+                //thrusters.ResetTrails();
+            }
+            else if (trans.position.x > edge)
+            {
+                trans.position = new Vector3(edge, trans.position.y, trans.position.z);
+                //thrusters.ResetTrails();
+            }
         }
     }
 

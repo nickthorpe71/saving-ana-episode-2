@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf0c906e46414f36bcbc8d61892ac08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 15
   model: {fileID: 6787390176041812172}
+  explosionPrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+    type: 3}
+  endPort: {fileID: 0}
+  edgeLock: 1
+  edge: 22
 --- !u!114 &6787390174414895844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +68,8 @@ MonoBehaviour:
   forwardThruster: {fileID: 6787390174982871320}
   reverseThrusterLeft: {fileID: 6787390175411784072}
   reverseThrusterRight: {fileID: 6787390175723280904}
+  trailLeft: {fileID: 0}
+  trailRight: {fileID: 0}
 --- !u!136 &6787390174414895842
 CapsuleCollider:
   m_ObjectHideFlags: 0

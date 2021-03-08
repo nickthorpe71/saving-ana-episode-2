@@ -11,6 +11,7 @@ public class Asteriod : MonoBehaviour
         scaleIncreaseBoostMin = 3f, scaleIncreaseBoostMax = 9.8f;
     [SerializeField] Material[] materials;
     [SerializeField] bool usesMaterials;
+    [SerializeField] bool addForce;
 
     private Transform trans;
     private Vector3 randomRotation;
@@ -32,8 +33,11 @@ public class Asteriod : MonoBehaviour
         if (!gameObject.TryGetComponent(out Rigidbody rb))
            rb = gameObject.GetComponentInChildren<Rigidbody>();
         rb.mass = Mathf.Pow(scaleIncrease, 4);
-        rb.AddForce(Random.Range(-12 - scaleIncrease, 12 + scaleIncrease), 
-            Random.Range(0, 12 + scaleIncrease) * -1, 0, ForceMode.Impulse);
+        if (addForce)
+        {
+            rb.AddForce(Random.Range(-12 - scaleIncrease, 12 + scaleIncrease),
+                Random.Range(0, 12 + scaleIncrease) * -1, 0, ForceMode.Impulse);
+        }
         if (usesMaterials)
         {
             gameObject.GetComponent<MeshRenderer>().material = 
