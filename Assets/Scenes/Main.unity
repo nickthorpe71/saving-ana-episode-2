@@ -534,6 +534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MusicSource: {fileID: 899366415}
+  mainMusic: {fileID: 8300000, guid: 14f07a37bd837495fac7e687306eeb84, type: 3}
+  storyMusic: {fileID: 8300000, guid: 38d6c1e3e20c84ce89a31565181f5b52, type: 3}
+  travelMusic: {fileID: 8300000, guid: f4e557d713bf84321b25e5f4d68d9085, type: 3}
 --- !u!1 &1019467813
 GameObject:
   m_ObjectHideFlags: 0
