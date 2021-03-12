@@ -160,11 +160,11 @@ public class UIManagerTech : MonoBehaviour
 		 audioSlider.value = PlayerPrefs.GetFloat("volume");
 
 		// Settings screen
-		speakersIndex = speakersDefault;
-		subtitleLanguageIndex = subtitleLanguageDefault;
+		// speakersIndex = speakersDefault;
+		// subtitleLanguageIndex = subtitleLanguageDefault;
 
-		textSpeakers.text = speakers[speakersDefault];
-		textSubtitleLanguage.text = subtitleLanguage[subtitleLanguageDefault];
+		// textSpeakers.text = speakers[speakersDefault];
+		// textSubtitleLanguage.text = subtitleLanguage[subtitleLanguageDefault];
 	}
 
 	public void IncreaseIndex(int i){
@@ -211,13 +211,6 @@ public class UIManagerTech : MonoBehaviour
 	// Just for reloading the scene! You can delete this function entirely if you want to
 	void Update(){
 		SetTint();
-
-		if(showMenuBar){
-			// Menu Bar and Clock/Date Elements
-			DateTime time = DateTime.Now;
-			if(showTime){timeDisplay.text = time.Hour + ":" + time.Minute + ":" + time.Second;}else if(!showTime){timeDisplay.text = "";}
-			if(showDate){dateDisplay.text = System.DateTime.Now.ToString("yyyy/MM/dd");}else if(!showDate){dateDisplay.text = "";}
-		}
 	}
 
 	public void UIScaler(){
