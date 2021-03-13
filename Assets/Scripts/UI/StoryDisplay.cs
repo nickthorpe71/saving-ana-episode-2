@@ -50,6 +50,9 @@ public class StoryDisplay : MonoBehaviour
         dialogAnimator.AnimateDialogueBox(currentNode.text);
         dialogAnimator.storyDisplay = this;
         newDialog(currentNode.text);
+
+        ReloadScannerList();
+        ReloadBountyList();
     }
 
     public void newDialog(string newText)

@@ -437,7 +437,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.584
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -535,8 +535,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicSource: {fileID: 899366415}
   mainMusic: {fileID: 8300000, guid: 14f07a37bd837495fac7e687306eeb84, type: 3}
-  storyMusic: {fileID: 8300000, guid: 38d6c1e3e20c84ce89a31565181f5b52, type: 3}
+  p401Music: {fileID: 8300000, guid: 38d6c1e3e20c84ce89a31565181f5b52, type: 3}
+  p402Music: {fileID: 8300000, guid: d99ead77ee37c4b11abe10b95c3cd91d, type: 3}
+  p403Music: {fileID: 8300000, guid: f929a7d47f97f403ca636f09e5760598, type: 3}
   travelMusic: {fileID: 8300000, guid: f4e557d713bf84321b25e5f4d68d9085, type: 3}
+  chaseMusic: {fileID: 8300000, guid: e7a30c1d5e114484eb7d1864a41ed610, type: 3}
+  endMusic: {fileID: 8300000, guid: 45db115fef5704ce8a16ab61e46de01f, type: 3}
 --- !u!1 &1019467813
 GameObject:
   m_ObjectHideFlags: 0

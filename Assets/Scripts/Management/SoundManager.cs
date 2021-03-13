@@ -9,8 +9,12 @@ public class SoundManager : MonoBehaviour
 	public static SoundManager Instance = null;
 
     public AudioClip mainMusic;
-    public AudioClip storyMusic;
+    public AudioClip p401Music;
+    public AudioClip p402Music;
+    public AudioClip p403Music;
     public AudioClip travelMusic;
+    public AudioClip chaseMusic;
+    public AudioClip endMusic;
 
     private int currentLevel = 5555;
 
@@ -34,8 +38,6 @@ public class SoundManager : MonoBehaviour
 
     private void OnLevelWasLoaded(int level) 
     {
-        Debug.Log("hit");
-
         if (level != currentLevel)
         {
             currentLevel = level;
@@ -50,11 +52,27 @@ public class SoundManager : MonoBehaviour
                 case "Main":
                     PlayMusic(mainMusic);
                     break;
+
                 case "Story":
-                    PlayMusic(storyMusic);
+                    string storyNodeName = Context.Instance.currentNode.name;
+                    PlayMusic(p401Music);
+                    if(storyNodeName.Contains("End"))
+                        PlayMusic(endMusic);
+                    else if(storyNodeName == "Lobby" || storyNodeName == "Port401")
+                        PlayMusic(p401Music);
+                    else if(storyNodeName == "Port402")
+                        PlayMusic(p402Music);
+                    else if(storyNodeName == "Port403" || storyNodeName == "Port403Locked")
+                        PlayMusic(p403Music);
+
                     break;
+
                 case "Travel Short":
                     PlayMusic(travelMusic);
+                    break;
+
+                case "Chase":
+                    PlayMusic(chaseMusic);
                     break;
             }
     }
