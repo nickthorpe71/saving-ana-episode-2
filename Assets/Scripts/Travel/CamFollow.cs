@@ -6,8 +6,10 @@ public class CamFollow : MonoBehaviour
 {
     private Transform trans;
     public Transform target;
+    [SerializeField] float chaseMod;
+    [SerializeField] bool chaseScene;
 
-    private float distanceDamp = 2f;
+    [SerializeField] float distanceDamp = 2f;
     void Start()
     {
         trans = transform;
@@ -17,9 +19,18 @@ public class CamFollow : MonoBehaviour
     {
         if(target != null)
         {
-            Vector3 adjsutment = new Vector3(trans.position.x, target.position.y + 6, trans.position.z);
-            Vector3 curPos = Vector3.Lerp(trans.position, adjsutment, distanceDamp * Time.deltaTime);
-            trans.position = curPos;
+            if (!chaseScene)
+            {
+                Vector3 adjustment = new Vector3(trans.position.x, target.position.y + 6, trans.position.z);
+                Vector3 curPos = Vector3.Lerp(trans.position, adjustment, distanceDamp * Time.deltaTime);
+                trans.position = curPos;
+            }
+            else
+            {
+                Vector3 adjustment = new Vector3(trans.position.x, target.position.y + chaseMod, trans.position.z);
+                Vector3 curPos = Vector3.Lerp(trans.position, adjustment, distanceDamp * Time.deltaTime);
+                trans.position = curPos;
+            }
         }
     }
 }
