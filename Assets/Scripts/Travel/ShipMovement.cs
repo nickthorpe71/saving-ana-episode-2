@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ShipMovement : MonoBehaviour
 {
-    [HideInInspector] public float movementSpeed = 15f;
+    public float movementSpeed = 15f;
+    public bool chaseScene = false;
     private float turnSpeed = 150f;
 
     private Transform trans;
@@ -33,8 +34,7 @@ public class ShipMovement : MonoBehaviour
         Thrust();
         Turn();
         CheckThrusters();
-        ScreenConstraints();
-        
+        ScreenConstraints();       
     }
 
     void ScreenConstraints()
@@ -96,7 +96,14 @@ public class ShipMovement : MonoBehaviour
 
     void Thrust()
     {
-        trans.position += trans.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+        if (!chaseScene)
+        {
+            trans.position += trans.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+        }
+        else if (chaseScene)
+        {
+            trans.position += trans.forward * movementSpeed * Time.deltaTime;
+        }
     }
 
     public void Explode()

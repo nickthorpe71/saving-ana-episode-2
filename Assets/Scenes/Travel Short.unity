@@ -220,6 +220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jerFighter: {fileID: 1766392740}
+  waypoint: {fileID: 0}
+  asteroids: []
+  xBound: 0
+  yBound: 0
+  distanceToAsteroid: 0
 --- !u!4 &17529598
 Transform:
   m_ObjectHideFlags: 0
@@ -8672,6 +8677,11 @@ PrefabInstance:
       propertyPath: endPort
       value: 
       objectReference: {fileID: 90891919}
+    - target: {fileID: 6787390174414895847, guid: b2740f8436f9840e2860c60cfac1fa1c,
+        type: 3}
+      propertyPath: timeToBoostMax
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6787390174414895847, guid: b2740f8436f9840e2860c60cfac1fa1c,
         type: 3}
       propertyPath: explosionPrefab

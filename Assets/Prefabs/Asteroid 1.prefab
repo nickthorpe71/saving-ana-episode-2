@@ -94,10 +94,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab717d910b264c03b2d0a6388dace28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleOffset: 0.2
+  scaleOffset: 1
   scaleIncrease: 1
   rotationOffset: 50
-  scaleIncreaseMin: 0.25
+  scaleIncreaseMin: 1
   scaleIncreaseMax: 1.5
   scaleIncreaseBoostMin: 0.75
   scaleIncreaseBoostMax: 2
@@ -106,7 +106,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c7d00f74e498ab34684d9b6a89b4fdce, type: 2}
   - {fileID: 2100000, guid: 2a8e348d8b94e2e44b18d78b48204315, type: 2}
   usesMaterials: 1
-  addForce: 1
+  addForce: 0
 --- !u!54 &7684056337006589056
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,95 +1,39 @@
 ﻿using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ChaseAI : MonoBehaviour
 {
-    [SerializeField] float forwardSpeed, sidewaysSpeed, leftBoundary, rightBoundary, 
+    public float forwardSpeed, sidewaysSpeed;
+    public GameObject currentWaypoint;
+    [SerializeField]
+    float leftBoundary, rightBoundary,
         cushin, maxRoll = 90f, rotationSpeed = 25f, cushinMod;
     [SerializeField] List<GameObject> asteroids = new List<GameObject>();
+    Transform startMarker, endMarker;
+    float startTime, journeyLength;
 
     // Update is called once per frame
     void Update()
     {
-        SidewaysMovement();
         ForwardMovement();
-
+        SidewaysMovement();
         ZLock();
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 
     void ForwardMovement()
     {
         transform.Translate(Vector3.up * Time.deltaTime * forwardSpeed);
     }
-
     void SidewaysMovement()
     {
-        //if (nearestAsteroid != null)
-        if (asteroids.Count > 0)
+        if (currentWaypoint != null)
         {
-            cushin = (asteroids[0].transform.position.x / 2);
-            if (cushin > 0)
-            {
-                cushin += cushinMod;
-            }
-            else if (cushin < 0)
-            {
-                cushin -= cushinMod;
-            }
-            if (Mathf.Abs(asteroids[0].transform.position.x - transform.position.x) < Mathf.Abs(cushin))
-            {
-                // is it to the left or right?
-                if (asteroids[0].transform.position.x < transform.position.x)
-                {
-                    //it is to the left
-                    //set target x coordinate to the right
-                    float x = transform.position.x + cushin;
-
-                    //verify it is within the boundary
-                    //if not change target x to inside boundary
-                    if (Mathf.Abs(x) > rightBoundary)
-                    {
-                        transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed, Space.World);
-                        RollLeft();
-                    }
-                    else
-                    {
-                        transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed, Space.World);
-                        RollRight();
-                    }
-                }
-                else
-                {
-                    //it is to the right (we will assume right if dead center)
-                    //set target to the left
-                    float x = transform.position.x - cushin;
-                    //verify it is within the boundary
-                    //if not change target x to inside boundary
-                    if (Mathf.Abs(x) < leftBoundary)
-                    {
-                        transform.Translate(Vector3.right * Time.deltaTime * sidewaysSpeed, Space.World);
-                        RollRight();
-                    }
-                    else
-                    {
-                        transform.Translate(Vector3.left * Time.deltaTime * sidewaysSpeed, Space.World);
-                        RollLeft();
-                    }
-                }
-            }
-            else
-                RollBack();
-        }
-        else 
-        {
-            RollBack();
+            float distanceCovered = (Time.time - startTime) * sidewaysSpeed;
+            float fractionOfJourney = distanceCovered / journeyLength;
+            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
         }
     }
+
     void ZLock()
     {
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
@@ -115,19 +59,11 @@ public class ChaseAI : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, roll, step);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void UpdateMarkers()
     {
-        if (other.gameObject.tag == "Asteriod")
-        {
-            asteroids.Add(other.gameObject);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (asteroids.Contains(other.gameObject))
-        {
-            asteroids.Remove(other.gameObject);
-        }
+        startMarker = transform;
+        endMarker = currentWaypoint.transform;
+        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        startTime = Time.time;
     }
 }
