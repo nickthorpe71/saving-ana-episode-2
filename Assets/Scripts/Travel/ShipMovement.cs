@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ShipMovement : MonoBehaviour
 {
     public float movementSpeed = 15f;
-    public bool chaseScene = false;
+    public bool chaseScene = false, enginesDisabled;
     private float turnSpeed = 150f;
 
     private Transform trans;
@@ -21,6 +21,7 @@ public class ShipMovement : MonoBehaviour
 
     [SerializeField] bool edgeLock;
     [SerializeField] float edge = 24.2f;
+    [SerializeField] GameObject jerBanta;
 
 
     void Awake()
@@ -102,6 +103,14 @@ public class ShipMovement : MonoBehaviour
         }
         else if (chaseScene)
         {
+            if (enginesDisabled)
+            {
+                movementSpeed = jerBanta.GetComponent<ChaseAI>().forwardSpeed;
+                if (movementSpeed == 0)
+                {
+                    endPort.LoadNewLevel("Story");
+                }
+            }
             trans.position += trans.forward * movementSpeed * Time.deltaTime;
         }
     }

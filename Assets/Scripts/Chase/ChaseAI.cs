@@ -5,13 +5,11 @@ public class ChaseAI : MonoBehaviour
 {
     public float forwardSpeed, sidewaysSpeed;
     public GameObject currentWaypoint;
+    public bool enginesDisabled;
     [SerializeField]
     float leftBoundary, rightBoundary,
         cushin, maxRoll = 90f, rotationSpeed = 25f, cushinMod;
-    [SerializeField] List<GameObject> asteroids = new List<GameObject>();
-    Transform startMarker, endMarker;
-    float startTime, journeyLength;
-
+    Transform endMarker;
     // Update is called once per frame
     void Update()
     {
@@ -22,15 +20,36 @@ public class ChaseAI : MonoBehaviour
 
     void ForwardMovement()
     {
+        if (enginesDisabled)
+        {
+            forwardSpeed -= 20 * Time.deltaTime;
+            if (forwardSpeed <= 0)
+            {
+                forwardSpeed = 0;
+            }
+        }
         transform.Translate(Vector3.up * Time.deltaTime * forwardSpeed);
     }
     void SidewaysMovement()
     {
         if (currentWaypoint != null)
         {
-            float distanceCovered = (Time.time - startTime) * sidewaysSpeed;
-            float fractionOfJourney = distanceCovered / journeyLength;
-            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
+            if (enginesDisabled)
+            {
+                sidewaysSpeed = 0;
+            }
+            if (endMarker.position.x > transform.position.x)
+            {
+                transform.Translate(Vector3.right * sidewaysSpeed * Time.deltaTime, Space.World);
+                RollRight();
+            }
+            else if (endMarker.position.x < transform.position.x)
+            {
+                transform.Translate(Vector3.left * sidewaysSpeed * Time.deltaTime, Space.World);
+                RollLeft();
+            }
+            else
+                RollBack();
         }
     }
 
@@ -61,9 +80,15 @@ public class ChaseAI : MonoBehaviour
 
     public void UpdateMarkers()
     {
-        startMarker = transform;
         endMarker = currentWaypoint.transform;
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
-        startTime = Time.time;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Laser")
+        {
+            enginesDisabled = true;
+            Destroy(collision.gameObject);
+        }
     }
 }

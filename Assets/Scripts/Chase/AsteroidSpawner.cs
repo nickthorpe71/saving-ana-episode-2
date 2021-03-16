@@ -7,9 +7,9 @@ public class AsteroidSpawner : MonoBehaviour
     [SerializeField]
     float waveSpawnDistance = 5, distanceTravelled = 0, lastYPosition = 0,
         movementSpeed, movementSpeedIncrement = .01f, horizontalMovementSpeed, 
-        horizontalBoundary, horizontalChaseModifier;
+        horizontalBoundary;
     [SerializeField] Transform waypointSpawn, leftAsteroidSpawn, rightAsteroidSpawn;
-    [SerializeField] GameObject waypoint;
+    [SerializeField] GameObject waypoint, asteroidHolder;
     [SerializeField] GameObject[] asteroids;
     [SerializeField] ShipMovement playerShipMovement;
     [SerializeField] ChaseAI chaseAI;
@@ -26,9 +26,15 @@ public class AsteroidSpawner : MonoBehaviour
     {
         CalculatedDistanceTravelled();
         MoveSpawner();
-        playerShipMovement.movementSpeed = movementSpeed;
-        chaseAI.forwardSpeed = movementSpeed * .99f;
-        chaseAI.sidewaysSpeed = movementSpeed * horizontalChaseModifier;
+        if (playerShipMovement.enginesDisabled)
+        {
+
+        }
+        else
+        {
+            playerShipMovement.movementSpeed = movementSpeed;
+            chaseAI.forwardSpeed = movementSpeed * .99f;
+        }
     }
 
     private void MoveSpawner()
@@ -75,9 +81,14 @@ public class AsteroidSpawner : MonoBehaviour
         Vector3 left = leftAsteroidSpawn.transform.position;
         Vector3 right = rightAsteroidSpawn.transform.position;
         Vector3 waypointVec = waypointSpawn.transform.position;
-        GameObject.Instantiate(asteroids[Random.Range(0, asteroids.Length)], left, Quaternion.identity);
-        GameObject.Instantiate(asteroids[Random.Range(0, asteroids.Length)], right, Quaternion.identity);
+        GameObject asteroid1 = GameObject.Instantiate(asteroids[Random.Range(0, asteroids.Length)], left, Quaternion.identity);
+        GameObject asteroid2 = GameObject.Instantiate(asteroids[Random.Range(0, asteroids.Length)], right, Quaternion.identity);
         GameObject _waypoint = GameObject.Instantiate(waypoint, waypointVec, Quaternion.identity);
+        asteroid1.transform.SetParent(asteroidHolder.transform);
+        asteroid1.AddComponent<DestroyObject>();
+        asteroid2.transform.SetParent(asteroidHolder.transform);
+        asteroid2.AddComponent<DestroyObject>();
+        _waypoint.AddComponent<DestroyObject>();
         chaseAI.currentWaypoint = _waypoint;
         chaseAI.UpdateMarkers();
     }

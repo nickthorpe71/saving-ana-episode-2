@@ -737,6 +737,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6787390174414895847, guid: b2740f8436f9840e2860c60cfac1fa1c,
         type: 3}
+      propertyPath: jerBanta
+      value: 
+      objectReference: {fileID: 6924635040911193452}
+    - target: {fileID: 6787390174414895847, guid: b2740f8436f9840e2860c60cfac1fa1c,
+        type: 3}
       propertyPath: timeToBoostMax
       value: 3
       objectReference: {fileID: 0}
@@ -1515,6 +1520,101 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &549190328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549190322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6057d8a63641a4c8ba388e9be11934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 6811966587446507157, guid: 37700862f4e38cd419088b3a38216467,
+    type: 3}
+  jerBanta: {fileID: 6924635040911193453}
+  exitPosition: {fileID: 1857308684}
+  engageText: {fileID: 554513707}
+--- !u!1 &554513707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554513708}
+  - component: {fileID: 554513710}
+  - component: {fileID: 554513709}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &554513708
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554513707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 829374716}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 167.9}
+  m_SizeDelta: {x: 304.1, y: 117.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &554513709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554513707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Target within range! Press "space" to fire weapons!
+--- !u!222 &554513710
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554513707}
+  m_CullTransparentMesh: 0
 --- !u!1001 &571281719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2106,6 +2206,105 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1231023086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &829374712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829374716}
+  - component: {fileID: 829374715}
+  - component: {fileID: 829374714}
+  - component: {fileID: 829374713}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &829374713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829374712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &829374714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829374712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &829374715
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829374712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &829374716
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829374712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 554513708}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &835613717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,6 +5200,12 @@ MonoBehaviour:
   chaseMod: 20
   chaseScene: 1
   distanceDamp: 15
+--- !u!4 &1857308684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6787390174829060404, guid: b2740f8436f9840e2860c60cfac1fa1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 211180462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1863716455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4451345221705036, guid: 50cb48f671227bd40b28aaf98ca4d4ad,
@@ -5269,12 +5474,12 @@ MonoBehaviour:
   movementSpeedIncrement: 1
   horizontalMovementSpeed: 5
   horizontalBoundary: 25
-  horizontalChaseModifier: 1
   waypointSpawn: {fileID: 1891768838}
   leftAsteroidSpawn: {fileID: 610814489}
   rightAsteroidSpawn: {fileID: 2037893685}
   waypoint: {fileID: 4127436107272379592, guid: e6d441ed3bb39824db152f1c32e38848,
     type: 3}
+  asteroidHolder: {fileID: 835613717}
   asteroids:
   - {fileID: 7684056337006589058, guid: bb519e42047ee8d4ca8faadcdba66579, type: 3}
   - {fileID: 4477608226235665581, guid: b1675606dfb2a6e47b88851f26455909, type: 3}
@@ -10526,9 +10731,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6924635040911193453}
   - component: {fileID: 6924635040911193454}
+  - component: {fileID: 6924635040911193455}
+  - component: {fileID: 6924635040911193456}
   m_Layer: 0
   m_Name: JerBanta
-  m_TagString: Untagged
+  m_TagString: JerBanta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10561,15 +10768,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 0
-  sidewaysSpeed: 0
+  sidewaysSpeed: 5.5
   currentWaypoint: {fileID: 0}
+  enginesDisabled: 0
   leftBoundary: 5
   rightBoundary: 5
   cushin: 0
   maxRoll: 90
   rotationSpeed: 25
   cushinMod: 2
-  asteroids: []
+--- !u!65 &6924635040911193455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924635040911193452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6135983, y: 2.5570736, z: 1}
+  m_Center: {x: -0.026142359, y: -0.7785368, z: 0}
+--- !u!54 &6924635040911193456
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924635040911193452}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!198 &6924635041233331912
 ParticleSystem:
   m_ObjectHideFlags: 0
