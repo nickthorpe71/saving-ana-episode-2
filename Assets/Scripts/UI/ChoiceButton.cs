@@ -43,7 +43,7 @@ public class ChoiceButton : MonoBehaviour
             ChooseNextNode(ctxt);
 
             if(choice.nextNode.name == "EndChase") 
-                storyDisplay.Reload("Chase");
+                storyDisplay.Reload("Chase Arcade");
             else
                 storyDisplay.Reload("Travel Short");
         }

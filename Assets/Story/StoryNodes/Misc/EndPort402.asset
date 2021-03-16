@@ -16,9 +16,6 @@ MonoBehaviour:
   text: You jet toward Port 402 feeling that now is not the time to chase Jer Banta.
     Instead, you are focused on Zella. You get to Pot City Diner and see her sitting
     in her usual booth. You approach and say "Is now a good time to take you up on
-    that breakfast?"You jet toward Port 402 feeling that now is not the time to chase
-    Jer Banta. Instead, you are focused on Zella. You get to Pot City Diner and see
-    her sitting in her usual booth. You approach and say "Is now a good time to take
-    you up on that breakfast?"
+    that breakfast?"
   image: {fileID: 21300000, guid: 98d65e0c39f32420cbff53fe2f0a3ffa, type: 3}
   choices: []

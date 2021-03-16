@@ -16,9 +16,9 @@ MonoBehaviour:
   description: to man standing by the lightpost
   hasDialog: 1
   dialog: "Topps: \"Whelp looks like the life of a bounty hunter is just wandering
-    around talking to people, must be nice!\x03 This Jer Banata fella you are after
-    is a small fry compared to some of the other fish you've fried. Capturing him
-    shouldn't take you more than 15 to 20 minutes.\"\x03"
+    around talking to people, must be nice!\x03\"\n\n\"This Jer Banata fella you
+    are after is a small fry compared to some of the other fish you've fried. Capturing
+    him shouldn't take you more than 15 to 20 minutes.\"\x03"
   hasClue: 1
   clue: {fileID: 11400000, guid: 80a4bb29ea19c4ecd94fb7c2c366a642, type: 2}
   hasScanData: 0

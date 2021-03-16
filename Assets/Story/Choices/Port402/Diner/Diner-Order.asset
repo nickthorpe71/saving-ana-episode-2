@@ -16,8 +16,12 @@ MonoBehaviour:
   description: a meal from the waiter
   hasDialog: 1
   dialog: "You sit down at a table and flag down a waiter. They approach and you
-    request they bring you the special of the day.\x03\x03 \n\nA few minutes later
-    they return with a plate of home made thick pancakes with syrup and blueberries,
-    topped off with a few rashers of bacon."
+    request they bring you the special of the day.\x03\x03 A few minutes later they
+    return with a plate of home made thick pancakes with syrup and blueberries, topped
+    off with a few rashers of bacon."
+  hasClue: 0
+  clue: {fileID: 0}
+  hasScanData: 0
+  scanData: {fileID: 0}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 988d23d3e967e4415af39e828e9bdff6, type: 2}

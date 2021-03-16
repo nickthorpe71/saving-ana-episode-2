@@ -23,9 +23,13 @@ MonoBehaviour:
 
 
     You
-    finally see yourself for the first time. Since you woke up in Port 401 you knew
-    you weren''t in your own body but now you can place a face to the shell you are
-    now occupying. You are an attractive young woman in her mid thirtys, brunette,
-    5''5, and the look for a rebel. '
+    look in the mirror and see yourself for the first time. Since you woke up in
+    Port 401 you knew you weren''t in your own body but now you can place a face
+    to the shell you have been occupying. You are an attractive young woman in her
+    mid thirtys, brunette, 5''5, with the look for a rebel. '
+  hasClue: 0
+  clue: {fileID: 0}
+  hasScanData: 0
+  scanData: {fileID: 0}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: a9fa0cf73aff841acb3b227912341813, type: 2}

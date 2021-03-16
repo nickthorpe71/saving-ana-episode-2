@@ -19,8 +19,12 @@ MonoBehaviour:
     to ask what you want. You shout \"surprise me!\" He returns with light blue liquid
     in a small tumbler. \"This is called a Li Bai, after one of humanities great
     poets / alcoholics. It was said when he was drunk, he would walk around in his
-    house in the nude, which frightened many of his visitors. But Liu explained to
-    them: \u201CI see the earth and skies as my home and this room as my pants. What
-    are you, gentlemen, doing in my pants?\u201D"
+    house in the nude, which frightened many of his visitors. But Li would explain
+    to them: \u201CI see the earth and skies as my home and this room as my pants.
+    What are you, gentlemen, doing in my pants?\u201D"
+  hasClue: 0
+  clue: {fileID: 0}
+  hasScanData: 0
+  scanData: {fileID: 0}
   isWaypoint: 0
   nextNode: {fileID: 11400000, guid: 2e0caf2e26b8342d080b8334532a4d1c, type: 2}
