@@ -30,10 +30,5 @@ public class Lasers : MonoBehaviour
             canFire = true;
             engageText.SetActive(true);
         }
-        else
-        {
-            canFire = false;
-            engageText.SetActive(false);
-        }
     }
 }
