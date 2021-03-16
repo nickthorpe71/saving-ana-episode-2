@@ -125,4 +125,9 @@ public class StoryDisplay : MonoBehaviour
             yield return null;
         }
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Main");
+    }
 }
