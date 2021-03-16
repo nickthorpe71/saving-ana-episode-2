@@ -24,7 +24,8 @@ public class EndPort : MonoBehaviour
 		while (!operation.isDone){
 			float progress = Mathf.Clamp01(operation.progress / .9f);
 			
-			loadingBar.value = progress;
+            if(loadingBar != null)
+			    loadingBar.value = progress;
 
 			yield return null;
 		}

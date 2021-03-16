@@ -6,7 +6,7 @@ public class LaserBolt : MonoBehaviour
 {
     public float speed = 5;
     GameObject player;
-    // Start is called before the first frame update
+    public GameObject explosionPrefab;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -31,8 +31,10 @@ public class LaserBolt : MonoBehaviour
         if (other.tag == "JerBanta")
         {
             other.gameObject.GetComponent<ChaseAI>().enginesDisabled = true;
+            other.gameObject.GetComponent<ChaseAI>().SmokeOn();
             player.GetComponent<ShipMovement>().enginesDisabled = true;
-            
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

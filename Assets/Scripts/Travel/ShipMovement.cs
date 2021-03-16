@@ -35,7 +35,7 @@ public class ShipMovement : MonoBehaviour
         Thrust();
         Turn();
         CheckThrusters();
-        ScreenConstraints();       
+        ScreenConstraints();
     }
 
     void ScreenConstraints()

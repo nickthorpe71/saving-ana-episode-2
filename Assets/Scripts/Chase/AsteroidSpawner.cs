@@ -6,8 +6,9 @@ public class AsteroidSpawner : MonoBehaviour
 {
     [SerializeField]
     float waveSpawnDistance = 5, distanceTravelled = 0, lastYPosition = 0,
-        movementSpeed, movementSpeedIncrement = .01f, horizontalMovementSpeed, 
+        movementSpeed, movementSpeedIncrement = .0025f, horizontalMovementSpeed,
         horizontalBoundary;
+    int speedIncreaseTick = 0;
     [SerializeField] Transform waypointSpawn, leftAsteroidSpawn, rightAsteroidSpawn;
     [SerializeField] GameObject waypoint, asteroidHolder;
     [SerializeField] GameObject[] asteroids;
@@ -72,7 +73,16 @@ public class AsteroidSpawner : MonoBehaviour
             SpawnWave();
 
             //increase speed
-            movementSpeed += movementSpeedIncrement;
+            if (speedIncreaseTick >= 10)
+            {
+                movementSpeed += movementSpeedIncrement;
+                speedIncreaseTick = 0;
+            }
+            else
+            {
+                speedIncreaseTick++;
+            }
+
         }
     }
 

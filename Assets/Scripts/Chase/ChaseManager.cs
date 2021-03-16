@@ -10,7 +10,6 @@ public class ChaseManager : MonoBehaviour
     [SerializeField] float xBound, yBound;
     [SerializeField] float distanceToAsteroid;
     Context context;
-    // Start is called before the first frame update
     void Awake()
     {
         context = Context.Instance;
@@ -19,12 +18,4 @@ public class ChaseManager : MonoBehaviour
         else
             jerFighter.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //
-    }
-
-    
 }

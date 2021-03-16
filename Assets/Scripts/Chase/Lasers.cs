@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Lasers : MonoBehaviour
 {
@@ -9,11 +8,6 @@ public class Lasers : MonoBehaviour
     [SerializeField] Transform jerBanta, exitPosition;
     [SerializeField] GameObject engageText;
     bool canFire;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

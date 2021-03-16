@@ -5,6 +5,7 @@ public class ChaseAI : MonoBehaviour
 {
     public float forwardSpeed, sidewaysSpeed;
     public GameObject currentWaypoint;
+    public GameObject smokeEffect;
     public bool enginesDisabled;
     [SerializeField]
     float leftBoundary, rightBoundary,
@@ -83,12 +84,8 @@ public class ChaseAI : MonoBehaviour
         endMarker = currentWaypoint.transform;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void SmokeOn()
     {
-        if (collision.gameObject.tag == "Laser")
-        {
-            enginesDisabled = true;
-            Destroy(collision.gameObject);
-        }
+        smokeEffect.SetActive(true);
     }
 }
