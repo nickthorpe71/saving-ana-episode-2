@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: EndBar
   m_EditorClassIdentifier: 
+  location: Smokin' Gunz Bar
   text: Eternity is a long time, but not long enough to be chasing someone who may
     or may not dererve the bounty that's been placed on them. You head over to Smokin'
     Gunz and drink with Anigun for days. After all, there's no need to worry about

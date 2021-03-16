@@ -407,7 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentNode: {fileID: 11400000, guid: 80d9a15281f584703ae211c72e883a60, type: 2}
+  p403Unlocked: {fileID: 11400000, guid: 672ff9523d04140db9ed20d4804f3312, type: 2}
   isChase: 0
+  totalBountyClues: 3
   currentBountyClues: []
   currentScannerData: []
   storyDisplay: {fileID: 0}
@@ -18573,7 +18575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -6, y: 170}
+  m_AnchoredPosition: {x: -6, y: 191.40001}
   m_SizeDelta: {x: -142.4, y: 68.1}
   m_Pivot: {x: 0.50000006, y: 0.49999994}
 --- !u!224 &224495831218752118
@@ -18671,7 +18673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -5.9999084, y: 111}
+  m_AnchoredPosition: {x: -5.9999084, y: 132.40001}
   m_SizeDelta: {x: -142.4, y: 68.1}
   m_Pivot: {x: 0.50000006, y: 0.49999994}
 --- !u!224 &224508789890941678
@@ -19205,7 +19207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -5.9999084, y: 139.6}
+  m_AnchoredPosition: {x: -5.9999084, y: 161}
   m_SizeDelta: {x: -142.4, y: 68.1}
   m_Pivot: {x: 0.50000006, y: 0.49999994}
 --- !u!224 &224625982991763346

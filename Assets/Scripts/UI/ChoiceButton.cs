@@ -26,25 +26,43 @@ public class ChoiceButton : MonoBehaviour
 
     public void onClick()
     {
+        Context ctxt = Context.Instance;
+
         if (choice.hasDialog)
         {
             storyDisplay.newDialog(choice.dialog);
 
             if (choice.hasClue)
-                Context.Instance.AddClue(choice.clue.text);
+                ctxt.AddClue(choice.clue.text);
                 
             else if (choice.hasScanData)
-                Context.Instance.AddScanData(choice.scanData.text);
+                ctxt.AddScanData(choice.scanData.text);
         }
         else if (choice.isWaypoint)
         {
-            Context.Instance.currentNode = choice.nextNode;
-            storyDisplay.Reload("Travel Short");
+            ChooseNextNode(ctxt);
+
+            if(choice.nextNode.name == "EndChase") 
+                storyDisplay.Reload("Chase");
+            else
+                storyDisplay.Reload("Travel Short");
         }
         else
         {
-            Context.Instance.currentNode = choice.nextNode;
+            ChooseNextNode(ctxt);
             storyDisplay.Reload("Story");
+        }
+    }
+
+    private void ChooseNextNode(Context ctxt) 
+    {
+        if (choice.nextNode.name == "Port3Locked" && ctxt.currentBountyClues.Count >= ctxt.totalBountyClues)
+        {
+            ctxt.currentNode = ctxt.p403Unlocked;
+        }
+        else
+        {
+            ctxt.currentNode = choice.nextNode;
         }
     }
 }

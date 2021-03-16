@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: Lobby
   m_EditorClassIdentifier: 
+  location: Lobby
   text: "This palce looks like a boardwalk floating in space. \n\nThere is someone
     in a cloak leaning against a lamp post straight ahead of you smoking a cigarette.
     \n\nTo the left you see what looks like a run down bodega and to the right is

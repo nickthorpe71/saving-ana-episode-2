@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: Port402
   m_EditorClassIdentifier: 
+  location: Port 402
   text: This platform is filled with a warm light and the smell of delicious food.
     This port is well designed and looks very modern and clean. You see two signs,
     "Pot City Diner" and "Restroom"

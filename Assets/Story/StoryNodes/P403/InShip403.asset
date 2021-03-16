@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: InShip403
   m_EditorClassIdentifier: 
+  location: Port 403
   text: You realize that your cockpit smells mildly of cigarette smoke and alcohol.
     You grab a pizza shaped air freshener form the console and place hang it from
     a monitor arm. "Much better!"

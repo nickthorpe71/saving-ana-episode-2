@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: EndPort401
   m_EditorClassIdentifier: 
+  location: End
   text: You fly back to Port 401 to tell Topps that you have given up on bounty hunting.
     Upon arrival you see the lamp post he is usually leaning against but he is nowhere
     to be found. Just then you notice that on the ground where you originally fell

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9ce51f674ef47e0b38d08784d8989a, type: 3}
   m_Name: Diner
   m_EditorClassIdentifier: 
+  location: Pot City Diner
   text: 'As you enter the diner through the decorated metal door, you are welcomed
     by the sent of delicious food and the gaze of a beautiful woman sitting in a
     booth. '

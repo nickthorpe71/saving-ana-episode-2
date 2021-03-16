@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Travel Short.unity
     guid: e6a843c50d9498c4f8720ab179d2588c
+  - enabled: 1
+    path: Assets/Scenes/Chase.unity
+    guid: a1ac631286a0c374284ac47cdff91119
   m_configObjects: {}

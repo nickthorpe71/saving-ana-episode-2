@@ -28,19 +28,18 @@ public class StoryDisplay : MonoBehaviour
     public StoryNode lobbyNode;
 
     public TMP_Text dialogueTextBox;
+    public TMP_Text locationText;
 
     public ListCounter bountyCounter;
     public ListCounter scanCounter;
+
 
     void Start()
     {
         bountyCounter.UpdateCount(Context.Instance.currentBountyClues.Count);
         scanCounter.UpdateCount(Context.Instance.currentScannerData.Count);
 
-        if (Context.Instance.currentNode != null)
-            currentNode = Context.Instance.currentNode;
-        else
-            currentNode = lobbyNode;
+        currentNode = Context.Instance.currentNode;
 
         Context.Instance.storyDisplay = this;
 
@@ -50,6 +49,8 @@ public class StoryDisplay : MonoBehaviour
         dialogAnimator.AnimateDialogueBox(currentNode.text);
         dialogAnimator.storyDisplay = this;
         newDialog(currentNode.text);
+
+        locationText.text = "NOW HERE: " + currentNode.location;
 
         ReloadScannerList();
         ReloadBountyList();

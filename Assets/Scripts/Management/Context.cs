@@ -4,9 +4,11 @@ using UnityEngine;
 public class Context : MonoBehaviour
 {
     public StoryNode currentNode;
+    public StoryNode p403Unlocked;
+
     public bool isChase;
 
-    private const int totalBountyClues = 3;
+    public int totalBountyClues = 3;
     public List<string> currentBountyClues = new List<string>();
     public List<string> currentScannerData = new List<string>();
 
